@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Imprima&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <title>Aum Global Solutions</title>
+
+<style>
+     .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+      }
+    
+      .animated.faster {
+        -webkit-animation-duration: 500ms;
+        animation-duration: 500ms;
+      }
+    
+      .fadeIn {
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+      }
+    
+      .fadeOut {
+        -webkit-animation-name: fadeOut;
+        animation-name: fadeOut;
+      }
+    
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+    
+        to {
+          opacity: 1;
+        }
+      }
+    
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+    
+        to {
+          opacity: 0;
+        }
+      }
+
+    footer {
+    font-family: 'Imprima', sans-serif;
+    }
+
+</style>
+</head>
+
+
+<body>
+	<nav class="sticky top-0 z-50 shadow relative px-4 py-4 flex justify-between items-center bg-white tracking-wide text-blue-900" style = "font-family: 'Imprima', sans-serif;">
+		<a class="text-3xl font-bold leading-none" href="#">
+			<img src = "assets/logo1.png" class = "h-16 w-16">
+		</a>
+		<div class="lg:hidden">
+			<button class="navbar-burger flex items-center text-blue-600 p-3">
+				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Mobile menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
+		</div>
+		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+			<li><a class="text-md text-black-400 hover:text-orange-500" href="index.html#hr-services" >HR SERVICES</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">ABOUT</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">CAREER COUNSELING</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">EDUCATION</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">CONTACT</a></li>
+		</ul>
+    <button onclick="openModal()" class='hidden lg:inline-block py-2 px-6 bg-orange-400 hover:bg-orange-600 text-md text-white font-bold rounded-xl transition duration-200'>CURRENT JOBS</button>
+	</nav>
+	<div class="navbar-menu relative z-50 hidden" style = "font-family: 'Imprima', sans-serif;">
+		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+			<div class="flex items-center mb-8">
+				<a class="mr-auto text-3xl font-bold leading-none" href="#">
+					<img src = "assets/logo1.png" class = "h-12">
+				</a>
+				<button class="navbar-close">
+					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div>
+				<ul>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="index.html#hr-services">HR Services</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">About Us</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Career Counselling</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Education</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mt-auto">
+				<div>
+          <button onclick="openModal()" class='block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-orange-400 hover:bg-orange-600  rounded-xl'>CURRENT JOBS</button>
+        </div>
+				<p class="my-4 text-xs text-center text-gray-400">
+					<span>Copyright © 2021</span>
+				</p>
+			</div>
+		</nav>
+	</div>
+
+ 
+
+
+<!-- Modal pop up for current jobs -->
+
+<div class="main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
+  style="background: rgba(0,0,0,.7);">
+  <div
+    class="border border-teal-500 shadow-lg modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+    <div class="modal-content py-4 text-left px-6">
+      <div class="flex justify-between items-center pb-3">
+        <p class="text-xl font-bold text-red-500">Oops!</p>
+        <div class="modal-close cursor-pointer z-50">
+          <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+            viewBox="0 0 18 18">
+            <path
+              d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+            </path>
+          </svg>
+        </div>
+      </div>
+      <!--Body-->
+      <div class="my-5">
+        <p>This feature is not yet active. You can <a href = "#upload-resume" class = "underline">upload your resume</a> and we will get back to you at the earliest!</p>
+      </div>
+      <!--Footer-->
+      <div class="flex justify-end pt-2">
+        <button
+          class="focus:outline-none modal-close px-4 bg-gray-400 p-3 rounded-lg text-black hover:bg-gray-300">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Main content-->
+
+<!--header photo-->
+<img src = "assets/career.gif" class = "h-72 w-full object-cover">
+
+<!--intro text-->
+<div class = "w-screen py-4 px-8 lg:px-48 text-lg tracking-wide leading-7 text-gray-600 italic font-bold" style = "font-family: 'Lato', sans-serif;" >
+<p class = "py-4">Embarking on a career journey can be a transformative and life-changing experience. It requires a deep understanding of your philosophical, emotional, and practical perspectives.</p>
+<p>At our career counselling center, we believe that a fulfilling career is the result of a holistic approach that encompasses all three perspectives.</p>
+</div>
+
+<!--intro with image-->
+<div class = "flex flex-col md:flex-col lg:flex-row justify-center py-12 mx-auto px-8 border-b-2">
+<img src = "assets/career-intro.png" class = "h-3/4 w-3/4 lg:h-2/5 lg:w-2/5 md:h-96 md:w-96 mx-auto">
+<div class = "text-gray-600 text-lg leading-7 tracking-wide lg:py-12 lg:px-16 py-8" style="font-family: 'Source Serif 4', serif;">
+<p class = "p-4">From a philosophical perspective, we believe that each person has a unique purpose and mission in life. Our career counsellors work with you to help you discover your purpose and align your career goals with your core values and beliefs. Our counsellors help you to build resilience and confidence in yourself, so that you can overcome any obstacles that may arise.</p>
+<p class = "p-4">From a practical perspective, we provide you with the tools and resources you need to achieve your career goals. We provide guidance on job search strategies, resume building, interviewing skills, and networking to help you achieve success. At our career counselling center, we believe that a fulfilling career is the result of a journey that encompasses all three perspectives – philosophical, emotional, and practical.Contact us today to start your transformative career journey.</p>
+</div>
+</div>
+
+<!--Helping Children and Parents navigate the Future-->
+<div class = "w-screen mx-auto">
+    <h2 style = "font-family: 'Lato', sans-serif;" class = "text-xl tracking-wide px-8 py-5 text-blue-900 lg:text-2xl lg:text-center lg:py-2 lg:pb-8 font-bold">HELPING CHILDREN AND PARENTS NAVIGATE THE FUTURE</h2>
+    <p class = "px-8 lg:px-48 text-gray-600 text-lg leading-7 tracking-wide py-2" style="font-family: 'Source Serif 4', serif;">As a parent, you want the best for your child. You want them to be happy, fulfilled, and successful in their chosen career. But with so many options and uncertainties, it can be overwhelming for both you and your child. That's where career counselling comes in.</p>
+</div>
+
+<div class = "lg:w-4/5 w-screen mx-auto items-center px-2">
+<div class = "flex flex-col lg:flex-row justify-around items-center pt-8 border-b-2">
+        <p class = "text-gray-500 text-lg leading-7 tracking-wide p-5" style="font-family: 'Source Serif 4', serif;">At our career counselling center, we provide guidance and support to help children and parents navigate the future. We understand that every child is unique, with their own set of strengths, interests, and passions. Our goal is to help your child identify their true calling and make informed decisions about their future.</p>
+        <img src="assets/guidance.png" class = "h-56 w-56 lg:h-4/5 md:h-96 md:w-96">
+</div>
+<div class = "flex flex-col lg:flex-row justify-around items-center pt-8 border-y-2">
+        <img src="assets/child.png" class = "h-56 w-56 lg:h-4/5 md:h-96 md:w-96">
+        <p class = "text-gray-500 text-lg leading-7 tracking-wide p-5" style="font-family: 'Source Serif 4', serif;">
+            From a child's perspective, career counselling can be a fun and exciting process. Our career counsellors use a variety of interactive tools and exercises to help children explore their interests, skills, and personality traits. We also provide guidance on education and training options, job prospects, and the current job market.</p>
+</div>
+<div class = "flex flex-col lg:flex-row justify-around items-center pt-8 border-y-2"> 
+        <p class = "text-gray-500 text-lg leading-7 tracking-wide p-5" style="font-family: 'Source Serif 4', serif;">From a parent's perspective, career counselling can provide peace of mind and confidence in your child's future. Our counsellors work with parents to understand their child's goals and aspirations, and provide guidance on the best ways to support their child's career development.</p>
+        <img src="assets/parent.png" class = "h-56 w-56 lg:h-4/5 md:h-96 md:w-96">
+</div>
+<div class = "flex flex-col lg:flex-row justify-around items-center pt-8 border-y-2">
+        <img src="assets/together.png" class = "h-56 w-56 lg:h-4/5 md:h-96 md:w-96">
+        <p class = "text-gray-500 text-lg leading-7 tracking-wide p-5" style="font-family: 'Source Serif 4', serif;">
+            At our career counselling center, we believe that by working together, children and parents can make informed decisions about their future. We provide a safe and supportive environment for children and parents to explore their options, ask questions, and make informed decisions about their career paths.</p>
+</div>
+</div>
+
+<!--Why career counseling is the need of the day-->
+<div class = "w-screen mx-auto pt-12">
+<h2 style = "font-family: 'Lato', sans-serif;" class = "text-xl tracking-wide px-8 py-5 text-blue-900 lg:text-2xl lg:text-center lg:py-2 lg:pb-8 font-bold">WHY CAREER COUNSELING IS THE NEED OF THE DAY</h2>
+<p class = "px-8 lg:px-48 text-gray-600 text-lg leading-7 tracking-wide" style="font-family: 'Source Serif 4', serif;">As the world evolves and new industries emerge, the job market becomes more competitive and complex. In this ever-changing landscape, career counselling has become an essential need of the era. Here are just a few reasons why:</p>
+</div>
+
+<div class = "w-4/5 w-screen mx-auto items-center px-2 border-b-2 pb-4">
+    <div class = "flex flex-col lg:flex-row justify-around lg:px-12 pt-6 items-center">
+            <img src="assets/1.png" class = " my-4 lg:mx-4 lg:my-0 md:h-20 md:w-20 h-16 w-16 lg:h-28 lg:w-28 border-orange-600 border-solid rounded-full border-2 shadow-lg ">
+            <p class = "text-gray-500 text-lg leading-7 tracking-wide" style="font-family: 'Source Serif 4', serif;"><span class = "text-blue-900 underline">Personalized Guidance:</span></br> With so many career options available, it can be overwhelming to make a decision. Career counselling provides personalized guidance and support to help you identify your strengths, interests, and values, and find a career path that aligns with them</p>
+    </div>
+    <div class = "flex flex-col lg:flex-row justify-around lg:px-12 py-6 items-center border-t-2">
+            <img src="assets/5.png" class = "my-4 lg:mx-4 lg:my-0 md:h-20 md:w-20 h-16 w-16 lg:h-28 lg:w-28 border-orange-600 border-solid rounded-full border-2 shadow-lg">
+            <p class = "text-gray-500 text-lg leading-7 tracking-wide" style="font-family: 'Source Serif 4', serif;"><span class = "text-blue-900 underline">Confidence and Self-Awareness:</span></br> Career counselling can help you build confidence and self-awareness. By identifying your strengths and weaknesses, you can build a sense of self-efficacy and take steps towards achieving your goals.</p>
+    </div>
+    <div class = "flex flex-col lg:flex-row justify-around lg:px-12 py-6 items-center border-t-2">
+            <img src="assets/2.png" class = "my-4 lg:mx-4 lg:my-0 md:h-20 md:w-20 h-16 w-16 lg:h-28 lg:w-28 border-orange-600 border-solid rounded-full border-2 shadow-lg">
+            <p class = "text-gray-500 text-lg leading-7 tracking-wide" style="font-family: 'Source Serif 4', serif;"><span class = "text-blue-900 underline">Job Market Insight:</span>Our career counsellors have their fingers on the pulse of the job market. They can provide valuable insight into current job trends, emerging industries, and the skills that are in high demand.</p>
+    </div>
+    <div class = "flex flex-col lg:flex-row justify-around lg:px-12 py-6 items-center border-t-2">
+            <img src="assets/3.png" class = "my-4 lg:mx-4 lg:my-0 md:h-20 md:w-20 h-16 w-16 lg:h-28 lg:w-28 border-orange-600 border-solid rounded-full border-2 shadow-lg ">
+            <p class = "text-gray-500 text-lg leading-7 tracking-wide" style="font-family: 'Source Serif 4', serif;"><span class = "text-blue-900 underline">Education and Training Guidance:</span></br> Pursuing education and training can be a significant investment of time and money. Career counselling can help you navigate the options and identify the best education and training programs to help you achieve your career goals.</p>
+    </div>
+    <div class = "flex flex-col lg:flex-row justify-around lg:px-12 py-6 items-center border-t-2">
+            <img src="assets/4.png" class = "my-4 lg:mx-4 lg:my-0 md:h-20 md:w-20 h-16 w-16 lg:h-28 lg:w-28 border-orange-600 border-solid rounded-full border-2 shadow-lg">
+            <p class = "text-gray-500 text-lg leading-7 tracking-wide" style="font-family: 'Source Serif 4', serif;"><span class = "text-blue-900 underline">Skill Development:</span></br> Career counselling can help you identify the skills you need to develop to succeed in your chosen career. Our counsellors can provide guidance on the best ways to develop these skills, whether through education, training, or on-the-job experience.</p>
+    </div>
+    <div class = "flex flex-col lg:flex-row justify-around lg:px-12 py-6 items-center border-t-2">
+            <img src="assets/6.png" class = "my-4 lg:mx-4 lg:my-0 md:h-20 md:w-20 h-16 w-16 lg:h-28 lg:w-28 border-orange-600 border-solid rounded-full border-2 shadow-lg"> 
+            <p class = "text-gray-500 text-lg leading-7 tracking-wide" style="font-family: 'Source Serif 4', serif;"><span class = "text-blue-900 underline">Goal Setting:</span></br>Setting clear and achievable goals is essential for career success. Career counselling can help you set realistic and meaningful goals, and provide guidance on the steps you need to take to achieve them./p>
+    </div>
+</div>
+
+<!--Career Library-->
+<div class = "border-b-2">
+    <p class = "py-4 px-8 lg:px-48 text-lg tracking-wide leading-7 text-gray-600 italic font-bold" style = "font-family: 'Lato', sans-serif;">At our career counselling center, we believe that everyone can benefit from career counselling. Whether you're just starting out on your career journey or looking to make a change, we're here to help. Contact us today to schedule a consultation and unlock your full potential.</p>
+    <p class = "py-4 px-8 lg:px-48 text-lg tracking-wide leading-7 text-gray-800" style = "font-family: 'Lato', sans-serif;"> You can check out our <a href = "career-library.html" class = "underline text-blue-900">career library</a> to get started!</p>
+</div>
+
+<!--Why AGS for your career-->
+<div class = "lg:w-4/5 w-screen mx-auto items-center px-2 py-4">
+    <h2 style = "font-family: 'Lato', sans-serif;" class = "text-xl tracking-wide px-8 py-5 text-blue-900 lg:text-2xl lg:text-center lg:py-2 lg:pb-8 font-bold">WHY AUM GLOBAL SOLUTIONS FOR YOUR CAREER</h2>
+    <div class = "flex flex-col md:flex-row lg:flex-row justify-around items-center pt-8">
+        <img src = "assets/Business mission.gif" class = "lg:h-96 md:h-80 h-72 mx-auto mx-8 rounded-xl">
+        <div class = "lg:px-28 px-8 lg:text-2xl text-lg leading-7" style = "font-family: 'Imprima', sans-serif;" >
+            <p class = "py-2">Are you feeling lost in your career?</p>
+            <p class = "py-2">Are you unsure of your next steps or feeling unfulfilled in your current job?</p>
+            <p class = "py-2">If so, you're not alone. Many people struggle with finding the right career path, and that's where career counselling comes in.</p>
+        </div>
+    </div>
+
+    <p style="font-family: 'Source Serif 4', serif;" class = "text-lg leading-7 text-gray-600 shadow-lg lg:px-32 lg:mt-8 bg-gray-200 lg:py-8 rounded-lg px-4 py-4 md:px-12 mt-4">Our goal is to help you unlock your full potential by providing personalized guidance and support throughout your career journey. 
+        Our approach to career counselling is unique and innovative. We use a variety of tools and techniques to help you explore your strengths, values, personality, 
+        and goals. Our career counsellors are highly trained and experienced in helping people from all walks of life. With our guidance and support, you can unlock your full potential and achieve your dreams. 
+        Don't wait any longer to start your journey to a fulfilling career – contact us today to schedule a consultation!</p>
+</div>
+
+<!--USP-->
+<div class = "lg:w-4/5 w-screen mx-auto items-center px-2 py-4 lg:mt-6">
+    <h2 style = "font-family: 'Lato', sans-serif;" class = "text-xl tracking-wide px-8 py-5 text-blue-900 lg:text-2xl lg:text-center lg:py-2 lg:pb-8 font-bold">OUR USPs</h2>
+    <img src = "assets/usp.jpg" class = "h-72 mt-4 mx-auto lg:h-96 md:h-80">
+    <p style="font-family: 'Source Serif 4', serif;" class = "text-gray-700 lg:text-xl text-lg leading-7 lg:px-24 lg:py-8 px-4 py-2">At our career counselling center, we offer a range of unique and innovative services that set us apart from the rest. Here are just a few of our USPs:</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div class = "mx-auto max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <img src = "assets/holistic.png" class = "h-12 mx-auto mb-5">
+            <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Holistic Approach</h5>
+            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400"> Our holistic approach takes into account your personal values, interests, strengths, and life goals to help you find a career that aligns with your overall vision for your life.</p>
+          </div>
+          <div class = "mx-auto max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <img src = "assets/innovative.png" class = "h-12 mx-auto mb-5">
+            <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Innovative Tools and Techniques</h5>
+            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Our career counsellors use a variety of innovative tools and techniques to help you explore your options, including psychometric assessments, role-playing exercises, and career simulations. </p>
+          </div>
+          <div class = "mx-auto max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <img src = "assets/experienced-c.png" class = "h-12 mx-auto mb-5">
+            <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Experienced Counsellers</h5>
+            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Our team of experienced career counsellors has a deep understanding of the job market and the skills and qualifications required to succeed in various fields. </p>
+          </div>
+          <div class = "mx-auto max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <img src = "assets/customised.png" class = "h-12 mx-auto mb-5">
+            <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Customized Career Plans</h5>
+            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">We understand that every individual has unique needs and aspirations. That's why we create customized career plans tailored to your specific goals and requirements. </p>
+          </div>
+          <div class = "mx-auto max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <img src = "assets/ongoing-suuport.png" class = "h-12 mx-auto mb-5">
+            <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Ongoing Support</h5>
+            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Our career counselling services don't end after your initial consultation. We provide ongoing support to help you stay on track with your career goals. </p>
+          </div>
+    </div>
+</div>
+
+<!--Queries Form-->
+<div class = "w-screen mx-auto items-center px-2 py-4 lg:mt-6">
+    <h2 style = "font-family: 'Lato', sans-serif;" class = "text-xl tracking-wide px-8 py-5 text-blue-900 lg:text-2xl lg:text-center lg:py-2 lg:pb-8 font-bold">ADD YOUR QUERIES</h2>
+    <div class = "h-max flex justify-center">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfO9huHiZhUdBILbrbsiAUdc3DKwcLgyRAyqnYZ8jvADoF7zQ/viewform?embedded=true" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer class = "h-max bg-cyan-800 w-screen text-white">
+  <div class="flex flex-col lg:flex-row h-max w-screen justify-between p-2 pl-12 pt-5 text-base lg:text-xl">
+    <div>
+      <p class = "underline mt-2"> Contact Details</p>
+      <p class = "pt-2"> Address: 
+        G-1, Balaji Homes, Coastal Hwy, <br />
+        near daman polyclinic, Dunetha, Daman, <br /> 
+        Dadra and Nagar Haveli and Daman and Diu 396210</p>
+
+        <p class = "pt-2">Phone:
+          (+91)7383071056, (+91)9054471056</p>
+
+        <p class = "pt-2">Email:
+            info@aumglobalsolutions.com</p>
+    </div>
+    <div>
+      <p class = "underline mt-2">Links</p>
+      <ul>
+        <li><a href = "about.html">About us</a></li>
+        <li><a href = "home.html#services">HR Solutions</a></li>
+        <li><a href = "education.html">Education</a></li>
+        <li><a href = "career.html">Career Counselling</a></li>
+        <li><a href = "contact.html">Contact Us</a></li>
+        <li><a href = "home.html#upload-resume">Upload Resume</a></li>
+        </ul>
+    </div>
+    <div>
+      <img src = "assets/footer.png" class = "h-64 w-auto opacity-80">
+    </div>
+  </div>
+
+  <div class = "flex content-center justify-center w-screen">
+    <img src = "assets/instagram (1).png" class = "h-10 m-8">
+    <img src = "assets/facebook (2).png" class = "h-10 m-8">
+    <img src = "assets/linkedin (1).png" class = "h-10 m-8">
+  </div>
+</footer>
+
+<script>
+
+    //Navbar menu for small screen
+    // Burger menus
+    document.addEventListener('DOMContentLoaded', function() {
+        // open
+        const burger = document.querySelectorAll('.navbar-burger');
+        const menu = document.querySelectorAll('.navbar-menu');
+    
+        if (burger.length && menu.length) {
+            for (var i = 0; i < burger.length; i++) {
+                burger[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+        // close
+        const close = document.querySelectorAll('.navbar-close');
+        const backdrop = document.querySelectorAll('.navbar-backdrop');
+    
+        if (close.length) {
+            for (var i = 0; i < close.length; i++) {
+                close[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+        if (backdrop.length) {
+            for (var i = 0; i < backdrop.length; i++) {
+                backdrop[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    });
+    
+    
+    //current jobs modal pop up
+    const modal = document.querySelector('.main-modal');
+      const closeButton = document.querySelectorAll('.modal-close');
+    
+      const modalClose = () => {
+        modal.classList.remove('fadeIn');
+        modal.classList.add('fadeOut');
+        setTimeout(() => {
+          modal.style.display = 'none';
+        }, 500);
+      }
+    
+      const openModal = () => {
+        modal.classList.remove('fadeOut');
+        modal.classList.add('fadeIn');
+        modal.style.display = 'flex';
+      }
+      for (let i = 0; i < closeButton.length; i++) {
+    
+        const elements = closeButton[i];
+    
+        elements.onclick = (e) => modalClose();
+    
+        modal.style.display = 'none';
+    
+        window.onclick = function (event) {
+          if (event.target == modal) modalClose();
+        }
+      }
+</script>
+
+</body>
+</html>

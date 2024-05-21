@@ -138,11 +138,12 @@ h5 {
   font-family: "Lato", sans-serif;
 }
 
-footer {
+
+footer p {
   font-family: 'Imprima', sans-serif;
 }
 
-footer p {
+footer a {
   font-family: 'Imprima', sans-serif;
 }
 
@@ -154,7 +155,7 @@ footer p {
 <body>
 	<nav class="sticky top-0 z-50 shadow relative px-4 py-4 flex justify-between items-center bg-white tracking-wide text-blue-900" style = "font-family: 'Imprima', sans-serif;">
 		<a class="text-3xl font-bold leading-none" href="#">
-			<img src = "assets/logo1.png" class = "h-12 w-12">
+			<img src = "assets/logo1.png" class = "h-16 w-16">
 		</a>
 		<div class="lg:hidden">
 			<button class="navbar-burger flex items-center text-blue-600 p-3">
@@ -165,31 +166,19 @@ footer p {
 			</button>
 		</div>
 		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="#hr-services" >HR Services</a></li>
+			<li><a class="text-md text-black-400 hover:text-orange-500" href="#hr-services" >HR SERVICES</a></li>
 			<li class="text-gray-300">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-				</svg>
 			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">About Us</a></li>
+			<li><a class="text-md text-black-400 hover:text-orange-500" href="about.html">ABOUT</a></li>
 			<li class="text-gray-300">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-				</svg>
 			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">Career Counselling</a></li>
+			<li><a class="text-md text-black-400 hover:text-orange-500" href="career.html">CAREER COUNSELING</a></li>
 			<li class="text-gray-300">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-				</svg>
 			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">Education</a></li>
+			<li><a class="text-md text-black-400 hover:text-orange-500" href="education.html">EDUCATION</a></li>
 			<li class="text-gray-300">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-				</svg>
 			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">Contact Us</a></li>
+			<li><a class="text-md text-black-400 hover:text-orange-500" href="contact.html">CONTACT</a></li>
 		</ul>
     <button onclick="openModal()" class='hidden lg:inline-block py-2 px-6 bg-orange-400 hover:bg-orange-600 text-md text-white font-bold rounded-xl transition duration-200'>CURRENT JOBS</button>
 	</nav>
@@ -209,7 +198,7 @@ footer p {
 			<div>
 				<ul>
 					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#hr-services">HR Services</a>
+						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="index.html#hr-services">HR Services</a>
 					</li>
 					<li class="mb-1">
 						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">About Us</a>
@@ -282,89 +271,89 @@ footer p {
 <div class = "bg-gray-100 px-12" >
 <h2 class = "text-3xl text-center py-12 font-bold tracking-wider text-blue-900" style = "font-family: 'Lato', sans-serif;"> HR SERVICES </h2>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4 content-center" id = "hr-services">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 content-center" id = "hr-services">
   <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/staffing.png" class = "h-12 mx-auto mb-5">
     <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Staffing and Recruitment Services</h5>
     <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">At Aum Global Solutions, we understand that finding the right talent for your organization is crucial for success. </p>
-    <a href = "#" class=" py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <a href = "staffing.html" class=" py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
   <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/payroll.png" class = "h-12 mx-auto mb-5">
     <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Payroll Outsourcing</h5>
     <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Welcome to Aum Global Solutions, your reliable partner for payroll outsourcing services in India.  </p>
-    <a href="#" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <a href="payroll.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
   <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/contract.png" class = "h-12 mx-auto mb-5">
     <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Contract Labour Supply</h5>
     <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">At Aum Global Solutions, we understand the importance of contract labour in any organization. </p>
-    <a href="#" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <a href="contract.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
   <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/outsourcing.png" class = "h-12 mx-auto mb-5">
     <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Complete HR Outsourcing</h5>
     <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Whether you need complete HR outsourcing solutions or specific part HR outsourcing services, Aum Global Solutions has the expertise... </p>
-    <a href="#" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <a href="hr-outsourcing.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
   <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/mass.png" class = "h-12 mx-auto mb-5">
     <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Mass Hiring</h5>
     <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">At Aum Global Solutions, we understand that rapid business growth can lead to an urgent need for talent. </p>
-    <a href="#" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <a href="mass-hiring.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
   <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/training.png" class = "h-12 mx-auto mb-5">
     <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Training and Development</h5>
     <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">At Aum Global Solutions, we are committed to providing high-quality training and development programs that meet the specific needs of organizations and their employees. </p>
-    <a href="#" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <a href="training.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
   <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/overseas.png" class = "h-12 mx-auto mb-5">
     <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Overseas Recruitment</h5>
     <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Aum Global Solutions is a leading international recruitment agency, dedicated to connecting businesses with top talent from around the world. </p>
-    <a href="#" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <a href="overseas.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
   <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/hr setup.png" class = "h-12 mx-auto mb-5">
     <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">HR Function Setup</h5>
     <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Aum Global Solutions is committed to helping businesses in India establish an effective and efficient HR function that aligns... </p>
-    <a href="#" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <a href="hr-function.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
   <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/statutory.jpeg" class = "h-12 mx-auto mb-5">
     <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Statutory Compliance</h5>
     <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">At Aum Global Solutions, we understand that complying with labour laws, social compliance, PF laws, gratuity laws, and HR-related audits... </p>
-    <a href="#" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <a href="statutory.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
   <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/recruitment.jpeg" class = "h-12 mx-auto mb-5">
     <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Recruitment Process Outsourcing</h5>
     <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Recruitment is a critical function in any organization, and it requires considerable time and resources to ensure that the right candidates... </p>
-    <a href="#" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <a href="recruitment-process.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
   <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/cv.jpeg" class = "h-12 mx-auto mb-5">
     <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Professional CV Writing</h5>
     <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Aum Global Solutions is dedicated to helping candidates present themselves in the best possible light through our Professional CV Writing services. </p>
-    <a href="#" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <a href="cv-writing.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 </div>
 </div>
 
 
 <!-- Industries we serve -->
-<section class = "w-full px-5  bg-blue-900">
+<section class = "w-full px-5  bg-blue-900 my-5">
   <div class="carousel__wrapper mx-auto h-auto">
     <h1 class="carousel__header text-center text-3xl font-bold text-white tracking-wider" style = "font-family: 'Lato', sans-serif;">INDUSTRIES WE SERVE</h1>
     <div class="carousel__nav text-end px-10">
@@ -454,8 +443,8 @@ footer p {
 <div class = "h-full shadow-lg">
   
   <div class = "flex flex-col md:flex-row h-max w-screen items-center content-between">
-  <div class = "w-full">
-    <img src = "assets/team.jpg" class = "object-cover m-5 rounded-lg">
+  <div class = "w-full content-center">
+    <img src = "assets/team.jpg" class = "object-cover m-5 rounded-lg h-72 lg:h-96 md:80">
   </div>
   <div class = "w-full">
     <h2 class = "text-3xl text-center py-12 font-bold text-blue-900 tracking-wider" style = "font-family: 'Lato', sans-serif;">ABOUT US</h2>
@@ -486,12 +475,13 @@ scrolling="no"
 <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
 <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-241355322506045']", "https://form.jotform.com/")</script>
 </div>
-<!-- Footer -->
 
-<footer class = "h-max bg-cyan-900 w-screen text-white">
-  <div class="flex flex-col md:flex-row h-max w-screen justify-between p-2">
+
+<!-- Footer -->
+<footer class = "h-max bg-cyan-800 w-screen text-white">
+  <div class="flex flex-col lg:flex-row h-max w-screen justify-between p-2 pl-12 pt-5 text-base lg:text-xl">
     <div>
-      <p class = "text-xl underline mt-2"> Contact Details</p>
+      <p class = "underline mt-2"> Contact Details</p>
       <p class = "pt-2"> Address: 
         G-1, Balaji Homes, Coastal Hwy, <br />
         near daman polyclinic, Dunetha, Daman, <br /> 
@@ -504,7 +494,7 @@ scrolling="no"
             info@aumglobalsolutions.com</p>
     </div>
     <div>
-      <p class = "text-xl underline mt-2">Links</p>
+      <p class = "underline mt-2">Links</p>
       <ul>
         <li><a href = "about.html">About us</a></li>
         <li><a href = "home.html#services">HR Solutions</a></li>
@@ -515,14 +505,14 @@ scrolling="no"
         </ul>
     </div>
     <div>
-      <img src = "assets/footer.png" class = "h-64 w-auto">
+      <img src = "assets/footer.png" class = "h-64 w-auto opacity-80">
     </div>
   </div>
 
   <div class = "flex content-center justify-center w-screen">
-    <img src = "assets/instagram (1).png" class = "h-12 p-2">
-    <img src = "assets/facebook (2).png" class = "h-12 p-2">
-    <img src = "assets/linkedin (1).png" class = "h-12 p-2">
+    <img src = "assets/instagram (1).png" class = "h-10 m-8">
+    <img src = "assets/facebook (2).png" class = "h-10 m-8">
+    <img src = "assets/linkedin (1).png" class = "h-10 m-8">
   </div>
 </footer>
 

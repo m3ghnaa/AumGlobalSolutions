@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Imprima&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <title>Aum Global Solutions</title>
+
+<style>
+     .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+      }
+    
+      .animated.faster {
+        -webkit-animation-duration: 500ms;
+        animation-duration: 500ms;
+      }
+    
+      .fadeIn {
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+      }
+    
+      .fadeOut {
+        -webkit-animation-name: fadeOut;
+        animation-name: fadeOut;
+      }
+    
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+    
+        to {
+          opacity: 1;
+        }
+      }
+    
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+    
+        to {
+          opacity: 0;
+        }
+      }
+
+    footer {
+    font-family: 'Imprima', sans-serif;
+    }
+
+    .content {
+        font-family: "Source Serif 4", serif;
+    }
+</style>
+</head>
+
+
+<body>
+	<nav class="sticky top-0 z-50 shadow relative px-4 py-4 flex justify-between items-center bg-white tracking-wide text-blue-900" style = "font-family: 'Imprima', sans-serif;">
+		<a class="text-3xl font-bold leading-none" href="#">
+			<img src = "assets/logo1.png" class = "h-16 w-16">
+		</a>
+		<div class="lg:hidden">
+			<button class="navbar-burger flex items-center text-blue-600 p-3">
+				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Mobile menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
+		</div>
+		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+			<li><a class="text-md text-black-400 hover:text-orange-500" href="index.html#hr-services" >HR SERVICES</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">ABOUT</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">CAREER COUNSELING</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">EDUCATION</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">CONTACT</a></li>
+		</ul>
+    <button onclick="openModal()" class='hidden lg:inline-block py-2 px-6 bg-orange-400 hover:bg-orange-600 text-md text-white font-bold rounded-xl transition duration-200'>CURRENT JOBS</button>
+	</nav>
+	<div class="navbar-menu relative z-50 hidden" style = "font-family: 'Imprima', sans-serif;">
+		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+			<div class="flex items-center mb-8">
+				<a class="mr-auto text-3xl font-bold leading-none" href="#">
+					<img src = "assets/logo1.png" class = "h-12">
+				</a>
+				<button class="navbar-close">
+					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div>
+				<ul>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="index.html#hr-services">HR Services</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">About Us</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Career Counselling</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Education</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mt-auto">
+				<div>
+          <button onclick="openModal()" class='block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-orange-400 hover:bg-orange-600  rounded-xl'>CURRENT JOBS</button>
+        </div>
+				<p class="my-4 text-xs text-center text-gray-400">
+					<span>Copyright © 2021</span>
+				</p>
+			</div>
+		</nav>
+	</div>
+
+ 
+
+
+<!-- Modal pop up for current jobs -->
+
+<div class="main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
+  style="background: rgba(0,0,0,.7);">
+  <div
+    class="border border-teal-500 shadow-lg modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+    <div class="modal-content py-4 text-left px-6">
+      <div class="flex justify-between items-center pb-3">
+        <p class="text-xl font-bold text-red-500">Oops!</p>
+        <div class="modal-close cursor-pointer z-50">
+          <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+            viewBox="0 0 18 18">
+            <path
+              d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+            </path>
+          </svg>
+        </div>
+      </div>
+      <!--Body-->
+      <div class="my-5">
+        <p>This feature is not yet active. You can <a href = "#upload-resume" class = "underline">upload your resume</a> and we will get back to you at the earliest!</p>
+      </div>
+      <!--Footer-->
+      <div class="flex justify-end pt-2">
+        <button
+          class="focus:outline-none modal-close px-4 bg-gray-400 p-3 rounded-lg text-black hover:bg-gray-300">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Main content-->
+
+<div class = "content">
+    <h2 class = "text-3xl text-center py-12 font-bold tracking-wider text-blue-900" style = "font-family: 'Lato', sans-serif;"> Contract Labour Supply </h2>
+    <div class = "px-8 md:px-14 lg:px-72 text-gray-700 leading-10 tracking-wide mb-20 text-base md:text-lg lg:text-xl" >
+    <p class = "py-3">At Aum Global Solutions, we understand the importance of contract labour in any organization. Contract labour can help companies to manage their workforce requirements in a flexible and cost- effective manner. We specialize in providing high-quality contract labour supply services to meet the varying needs of our clients across different industries.</p>
+    <p class = "py-3">Our contract labour supply services cover a wide range of job profiles including skilled, semi-skilled and unskilled labour. We provide workers on a contractual basis to meet the specific project requirements of our clients. We ensure that our workers are well-trained, experienced and capable of working in different environments and conditions.</p>
+    <p class = "py-3">Our contract labour supply services also include compliance with all statutory regulations related to contract labour. We take care of all legal and administrative aspects of contract labour such as registration, licensing, payment of minimum wages, and compliance with labour laws.</p>
+    <p class = "py-3">We understand that payroll processing is a critical aspect of your organization's operations, and that is why we offer all-encompassing services that guarantee the industry's best and perfect payroll solutions. We offer three layers of services to match a range of organizational requirements, including payroll processing and compliance, employee self-service, and query resolution.</p>
+    <p class = "py-3">Our team of experts works closely with clients to understand their specific labour requirements and provide customized solutions. We also provide on-site supervision and support to ensure that our workers perform to the best of their abilities and deliver high-quality results.</p>
+    <p class = "py-3">By partnering with Aum Global Solutions for contract labour supply services, our clients can focus on their core business activities while leaving the workforce management to us. We ensure that our clients receive the best-in-class contract labour supply services that are flexible, reliable and cost- effective.</p>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class = "h-max bg-cyan-800 w-screen text-white">
+  <div class="flex flex-col lg:flex-row h-max w-screen justify-between p-2 pl-12 pt-5">
+    <div>
+      <p class = "text-xl underline mt-2"> Contact Details</p>
+      <p class = "pt-2"> Address: 
+        G-1, Balaji Homes, Coastal Hwy, <br />
+        near daman polyclinic, Dunetha, Daman, <br /> 
+        Dadra and Nagar Haveli and Daman and Diu 396210</p>
+
+        <p class = "pt-2">Phone:
+          (+91)7383071056, (+91)9054471056</p>
+
+        <p class = "pt-2">Email:
+            info@aumglobalsolutions.com</p>
+    </div>
+    <div>
+      <p class = "text-xl underline mt-2">Links</p>
+      <ul>
+        <li><a href = "about.html">About us</a></li>
+        <li><a href = "home.html#services">HR Solutions</a></li>
+        <li><a href = "education.html">Education</a></li>
+        <li><a href = "career.html">Career Counselling</a></li>
+        <li><a href = "contact.html">Contact Us</a></li>
+        <li><a href = "home.html#upload-resume">Upload Resume</a></li>
+        </ul>
+    </div>
+    <div>
+      <img src = "assets/footer.png" class = "h-64 w-auto opacity-80">
+    </div>
+  </div>
+
+  <div class = "flex content-center justify-center w-screen">
+    <img src = "assets/instagram (1).png" class = "h-10 m-8">
+    <img src = "assets/facebook (2).png" class = "h-10 m-8">
+    <img src = "assets/linkedin (1).png" class = "h-10 m-8">
+  </div>
+</footer>
+
+<script>
+
+    //Navbar menu for small screen
+    // Burger menus
+    document.addEventListener('DOMContentLoaded', function() {
+        // open
+        const burger = document.querySelectorAll('.navbar-burger');
+        const menu = document.querySelectorAll('.navbar-menu');
+    
+        if (burger.length && menu.length) {
+            for (var i = 0; i < burger.length; i++) {
+                burger[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+        // close
+        const close = document.querySelectorAll('.navbar-close');
+        const backdrop = document.querySelectorAll('.navbar-backdrop');
+    
+        if (close.length) {
+            for (var i = 0; i < close.length; i++) {
+                close[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+        if (backdrop.length) {
+            for (var i = 0; i < backdrop.length; i++) {
+                backdrop[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    });
+    
+    
+    //current jobs modal pop up
+    const modal = document.querySelector('.main-modal');
+      const closeButton = document.querySelectorAll('.modal-close');
+    
+      const modalClose = () => {
+        modal.classList.remove('fadeIn');
+        modal.classList.add('fadeOut');
+        setTimeout(() => {
+          modal.style.display = 'none';
+        }, 500);
+      }
+    
+      const openModal = () => {
+        modal.classList.remove('fadeOut');
+        modal.classList.add('fadeIn');
+        modal.style.display = 'flex';
+      }
+      for (let i = 0; i < closeButton.length; i++) {
+    
+        const elements = closeButton[i];
+    
+        elements.onclick = (e) => modalClose();
+    
+        modal.style.display = 'none';
+    
+        window.onclick = function (event) {
+          if (event.target == modal) modalClose();
+        }
+      }
+</script>
+
+</body>
+</html>
