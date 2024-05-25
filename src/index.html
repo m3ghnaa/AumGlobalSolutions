@@ -10,6 +10,7 @@
     <title>Aum Global Solutions</title>
 
     <style>
+
       .animated {
         -webkit-animation-duration: 1s;
         animation-duration: 1s;
@@ -370,70 +371,70 @@ footer a {
       </div>
     </div>
     <div class="carousel">
-      <div class="carousel__item h-96 py-12">
+      <div class="carousel__item h-52 h-96 py-12 px-4">
         <div>
           <img src = "assets/education.jpg" class = "h-52 w-72">
-          <div class="text-white center text-xl pt-2">Education/Training</div>
+          <div class="text-white center text-sm md:text-lg lg:text-xl pt-2">Education/Training</div>
         </div>
       </div>
-      <div class="carousel__item h-96 py-12">
+      <div class="carousel__item h-52 h-96 py-12 px-4">
         <div>
           <img src = "assets/banking.jpg" class = "h-52 w-72">
-          <div class="text-white center text-xl pt-2">Banking</div>
+          <div class="text-white center text-sm md:text-lg lg:text-xl pt-2">Banking</div>
         </div>
       </div>
-      <div class="carousel__item h-96 py-12">
+      <div class="carousel__item h-52 h-96 py-12 px-4">
         <div>
           <img src = "assets/agro.jpg" class = "h-52 w-72">
-          <div class="text-white center text-xl pt-2">Agrochemicals</div>
+          <div class="text-white center text-sm md:text-lg lg:text-xl pt-2">Agrochemicals</div>
         </div>
       </div>
-      <div class="carousel__item h-96 py-12">
+      <div class="carousel__item h-52 h-96 py-12 px-4">
         <div>
           <img src = "assets/construction.jpg" class = "h-52 w-72">
-          <div class="text-white center text-xl pt-2">Construction</div>
+          <div class="text-white center text-sm md:text-lg lg:text-xl pt-2">Construction</div>
         </div>
       </div>
-      <div class="carousel__item h-96 py-12">
+      <div class="carousel__item h-52 h-96 py-12 px-4">
         <div>
           <img src = "assets/engineering.jpg" class = "h-52 w-72">
-          <div class="text-white center text-xl pt-2">Engineering</div>
+          <div class="text-white center text-sm md:text-lg lg:text-xl pt-2">Engineering</div>
         </div>
       </div>
-      <div class="carousel__item h-96 py-12">
+      <div class="carousel__item h-52 h-96 py-12 px-4">
         <div>
           <img src = "assets/fmcg.jpg" class = "h-52 w-72">
-          <div class="text-white center text-xl pt-2">FMCG</div>
+          <div class="text-white center text-sm md:text-lg lg:text-xl pt-2">FMCG</div>
         </div>
       </div>
-      <div class="carousel__item h-96 py-12">
+      <div class="carousel__item h-52 h-96 py-12 px-4">
         <div>
           <img src = "assets/hr.jpg" class = "h-52 w-72">
-          <div class="text-white center text-xl pt-2">Human Resources</div>
+          <div class="text-white center text-sm md:text-lg lg:text-xl pt-2">Human Resources</div>
         </div>
       </div>
-      <div class="carousel__item h-96 py-12">
+      <div class="carousel__item h-52 h-96 py-12 px-4">
         <div>
           <img src = "assets/marketing.jpg" class = "h-52 w-72">
-          <div class="text-white center text-xl pt-2">Sales and Marketing</div>
+          <div class="text-white center text-sm md:text-lg lg:text-xl pt-2">Sales and Marketing</div>
         </div>
       </div>
-      <div class="carousel__item h-96 py-12">
+      <div class="carousel__item h-52 h-96 py-12 px-4">
         <div>
           <img src = "assets/oil.jpg" class = "h-52 w-72">
-          <div class="text-white center text-xl pt-2">Oil/Gas</div>
+          <div class="text-white center text-sm md:text-lg lg:text-xl pt-2">Oil/Gas</div>
         </div>
       </div>
-      <div class="carousel__item h-96 py-12">
+      <div class="carousel__item h-52 h-96 py-12 px-4">
         <div>
           <img src = "assets/pharmaceutical.jpg" class = "h-52 w-72">
-          <div class="text-white center text-xl pt-2">Pharmaceuticals/Health Care</div>
+          <div class="text-white center text-sm md:text-lg lg:text-xl pt-2">Pharmaceuticals/Health Care</div>
         </div>
       </div>
-      <div class="carousel__item h-96 py-12">
+      <div class="carousel__item h-52 h-96 py-12 px-4">
         <div>
           <img src = "assets/manufacturing.jpg" class = "h-52 w-72">
-          <div class="text-white center text-xl pt-2">Manufacturing/Operations</div>
+          <div class="text-white center text-sm md:text-lg lg:text-xl pt-2">Manufacturing/Operations</div>
         </div>
       </div>
     </div>
@@ -604,12 +605,12 @@ const modal = document.querySelector('.main-modal');
 
 
 //industries carousel
-  class Carousel {
+class Carousel {
   element = null;
   buttonDisabled = false;
   nav = null;
   items = [];
-  size = 4; // number of items to show
+  size = 4; // Default number of items to show
   gap = 16; // in px
   activeClass = true;
   itemProps = {
@@ -625,7 +626,7 @@ const modal = document.querySelector('.main-modal');
   }
 
   async init() {
-    await this.setMinItems();
+    await this.updateSize();
 
     this.itemProps.width = await this.getSize();
     this.element.style.height = this.items[0].clientHeight + "px";
@@ -641,6 +642,23 @@ const modal = document.querySelector('.main-modal');
     // update nodelist
     this.nav = this.element.parentElement.querySelector(".carousel__nav");
     await this.build();
+
+    // Add resize event listener
+    window.addEventListener("resize", async () => {
+      await this.updateSize();
+      this.itemProps.width = await this.getSize();
+      await this.build();
+    });
+  }
+
+  async updateSize() {
+    if (window.innerWidth < 768) {
+      this.size = 1; // 1 image per slide for smaller screens
+    } else if (window.innerWidth < 1024) {
+      this.size = 2; // 2 images per slide for medium screens
+    } else {
+      this.size = 4; // 4 images per slide for larger screens
+    }
   }
 
   async setMinItems() {
@@ -736,6 +754,7 @@ const modal = document.querySelector('.main-modal');
 
 const element = document.querySelector(".carousel");
 new Carousel(element);
+
 
 </script>
 </html>
