@@ -56,82 +56,91 @@
     font-family: 'Imprima', sans-serif;
     }
 
+    .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item {
+            min-width: 100%;
+        }
+
 </style>
 </head>
 
 
 <body>
-	<nav class="sticky top-0 z-50 shadow relative px-4 py-4 flex justify-between items-center bg-white tracking-wide text-blue-900" style = "font-family: 'Imprima', sans-serif;">
-		<a class="text-3xl font-bold leading-none" href="index.html">
-			<img src = "assets/logo1.png" class = "h-16 w-16">
-		</a>
-		<div class="lg:hidden">
-			<button class="navbar-burger flex items-center text-blue-600 p-3">
-				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-					<title>Mobile menu</title>
-					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-				</svg>
-			</button>
-		</div>
-		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="index.html#hr-services" >HR SERVICES</a></li>
-			<li class="text-gray-300">
-			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">ABOUT</a></li>
-			<li class="text-gray-300">
-			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">CAREER COUNSELING</a></li>
-			<li class="text-gray-300">
-			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">EDUCATION</a></li>
-			<li class="text-gray-300">
-			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">CONTACT</a></li>
-		</ul>
+  <!--Navbar-->
+  <nav class="sticky top-0 z-50 shadow relative lg:px-4 lg:py-6 px-2 py-4 md:px-4 md:py-4 flex justify-between items-center bg-white/50 tracking-wide text-blue-900 backdrop-blur-xl" style = "font-family: 'Imprima', sans-serif;">
+    <a class="text-3xl font-bold leading-none" href="index.html">
+      <img src = "assets/logo1.png" class = "xl:h-14 xl:w-14 lg:h-12 lg:w-12 md:h-10 md:w-10 h-8 w-8 inline"> 
+      <p class = "text-sm lg:text-base xl:text-xl md:text-xl text-light inline pl-2" style = "font-family: 'Lato', sans-serif;"> Aum Global Solutions</p>
+    </a>
+    
+    <div class="lg:hidden">
+      <button class="navbar-burger flex items-center text-blue-600 p-3">
+        <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Mobile menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+        </svg>
+      </button>
+    </div>
+    <ul class="hidden absolute pl-6 top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-3">
+      <li><a class="text-xs md:text-xs lg:text-sm  text-black-400 hover:text-orange-500" href="index.html#hr-services" >HR SERVICES</a></li>
+      <li class="text-gray-300">
+      </li>
+      <li><a class="text-xs md:text-xs lg:text-sm  text-black-400 hover:text-orange-500" href="about.html">ABOUT</a></li>
+      <li class="text-gray-300">
+      </li>
+      <li><a class="text-xs md:text-xs lg:text-sm  text-black-400 hover:text-orange-500" href="career.html">CAREER COUNSELLING</a></li>
+      <li class="text-gray-300">
+      </li>
+      <li><a class="text-xs md:text-xs lg:text-sm  text-black-400 hover:text-orange-500" href="education.html">EDUCATION</a></li>
+      <li class="text-gray-300">
+      </li>
+      <li><a class="text-xs md:text-xs lg:text-sm  text-black-400 hover:text-orange-500" href="contact.html">CONTACT</a></li>
+    </ul>
     <button onclick="openModal()" class='hidden lg:inline-block py-2 px-6 bg-orange-400 hover:bg-orange-600 text-md text-white font-bold rounded-xl transition duration-200'>CURRENT JOBS</button>
-	</nav>
-	<div class="navbar-menu relative z-50 hidden" style = "font-family: 'Imprima', sans-serif;">
-		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
-			<div class="flex items-center mb-8">
-				<a class="mr-auto text-3xl font-bold leading-none" href="#">
-					<img src = "assets/logo1.png" class = "h-12">
-				</a>
-				<button class="navbar-close">
-					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-					</svg>
-				</button>
-			</div>
-			<div>
-				<ul>
-					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="index.html#hr-services">HR Services</a>
-					</li>
-					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">About Us</a>
-					</li>
-					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Career Counselling</a>
-					</li>
-					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Education</a>
-					</li>
-					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Contact Us</a>
-					</li>
-				</ul>
-			</div>
-			<div class="mt-auto">
-				<div>
-          <button onclick="openModal()" class='block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-orange-400 hover:bg-orange-600  rounded-xl'>CURRENT JOBS</button>
+  </nav>
+  <div class="navbar-menu relative z-50 hidden" style = "font-family: 'Imprima', sans-serif;">
+    <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+    <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+      <div class="flex items-center mb-8">
+        <a class="mr-auto text-3xl font-bold leading-none" href="#">
+          <img src = "assets/logo1.png" class = "h-8 w-8">
+        </a>
+        <button class="navbar-close">
+          <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div>
+        <ul>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="index.html#hr-services">HR Services</a>
+          </li>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="about.html">About</a>
+          </li>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="career.html">Career Counselling</a>
+          </li>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Education</a>
+          </li>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mt-auto">
+        <div>
+          <button onclick="openModal()" class='block px-4 py-2 mb-2 leading-loose text-xs text-center text-white font-semibold bg-orange-400 hover:bg-orange-600  rounded-xl'>CURRENT JOBS</button>
         </div>
-				<p class="my-4 text-xs text-center text-gray-400">
-					<span>Copyright © 2021</span>
-				</p>
-			</div>
-		</nav>
-	</div>
+      </div>
+    </nav>
+  </div>
+
 
  
 
@@ -156,7 +165,7 @@
       </div>
       <!--Body-->
       <div class="my-5">
-        <p>This feature is not yet active. You can <a href = "#upload-resume" class = "underline">upload your resume</a> and we will get back to you at the earliest!</p>
+        <p>This feature is not yet active. You can <a href = "index.html#upload-resume" class = "underline">upload your resume</a> and we will get back to you at the earliest!</p>
       </div>
       <!--Footer-->
       <div class="flex justify-end pt-2">
@@ -171,78 +180,291 @@
    <img src = "assets/education.gif" class = "h-72 w-screen object-cover">
 
 <!--intro content-->
-   <h2 style = "font-family: 'Lato', sans-serif;" class = "text-xl tracking-wide px-8 py-5 text-blue-900 lg:text-2xl lg:text-center lg:py-2 lg:pb-8 font-bold">STUDY IN ABROAD/DOMESTIC COLLEGES OR UNIVERSITIES</h2>
-   <div class = "lg:w-4/5 w-screen py-4 px-8 lg:px-12 text-lg lg:text-xl tracking-wide leading-7 text-gray-600 italic font-bold mx-auto" style = "font-family: 'Lato', sans-serif;" >
+   <h2 style = "font-family: 'Lato', sans-serif;" class = "text-lg lg:text-2xl xl:text-3xl md:text-xl tracking-wide px-8 py-5 text-blue-900 lg:text-2xl lg:text-center lg:py-12 lg:pb-8 font-bold">STUDY IN ABROAD/DOMESTIC COLLEGES OR UNIVERSITIES</h2>
+   <div class = "lg:w-4/5 w-screen py-4 px-8 lg:px-12 text-base md:text-lg lg:text-xl tracking-wide leading-7 text-gray-600 italic md:font-bold mx-auto" style = "font-family: 'Lato', sans-serif;" >
     <p class = "py-2">Are you a student who dreams of pursuing higher education in the college or university of your dreams?</p>
     <p class = "py-2">Do you want to make sure that you get admitted to the right institution that will help you achieve your goals?</p>
     <p class = "py-2">Look no further than Aum Global Solutions!</p>
     </div>
 
-    <div class = "lg:w-4/5 w-screen py-4 px-4 lg:px-12 text-lg tracking-wide leading-7 text-gray-600 bg-gray-200 shadow rounder-lg mx-auto my-4">
-        <p style="font-family: 'Source Serif 4', serif;">At Aum Global Solutions, we understand how important it is for students to pursue their education in the right place. Whether it's studying at a prestigious domestic university or studying abroad in a foreign country, the college or university you choose will have a significant impact on your future success. That's why we're here to help you every step of the way.</p>
+    <div style = "font-family: 'Lato', sans-serif;" class = " bg-gray-100 mt-2 rounded mx-auto lg:w-5/6 w-full shadow-md py-12 px-4 md:px-14 lg:px-42 text-gray-700 leading-7 tracking-wide md:mb-20 text-base md:text-lg lg:text-xl">
+        <p >At Aum Global Solutions, we understand how important it is for students to pursue their education in the right place. Whether it's studying at a prestigious domestic university or studying abroad in a foreign country, the college or university you choose will have a significant impact on your future success. That's why we're here to help you every step of the way.</p>
     </div>
 
 <!--Why Choose Us-->
 <div class = "lg:w-4/5 w-screen mx-auto">
-    <h2 style = "font-family: 'Lato', sans-serif;" class = "text-xl tracking-wide px-8 py-5 text-blue-900 lg:text-2xl text-center lg:py-12 lg:pb-8 font-bold mt-4">WHY CHOOSE US?</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4">
-        <div class = "mx-auto max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <h2 style = "font-family: 'Lato', sans-serif;" class = "text-lg lg:text-2xl xl:text-3xl md:text-xl tracking-wide px-8 py-5 text-blue-900 lg:text-2xl text-center lg:py-6 lg:pb-12 font-bold mt-4">WHY CHOOSE US?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 px-4">
+        <div class = "mx-auto max-w-sm p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <img src = "assets/consultant.png" class = "h-12 mx-auto mb-5">
-            <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Experienced Consultants</h5>
-            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Our team of consultants has a wealth of experience in the education sector and is dedicated to helping you achieve your goals.</p>
+            <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Experienced Consultants</h5>
+            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">Our team of consultants has a wealth of experience in the education sector and is dedicated to helping you achieve your goals.</p>
           </div>
-          <div class = "mx-auto max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class = "mx-auto max-w-sm p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <img src = "assets/personalised-approach.png" class = "h-12 mx-auto mb-5">
-            <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Personalized Approach</h5>
-            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">We understand that every student is unique, which is why we provide personalized guidance and support to ensure you get the most out of your educational journey.</p>
+            <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Personalized Approach</h5>
+            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">We understand that every student is unique, which is why we provide personalized guidance and support to ensure you get the most out of your educational journey.</p>
           </div>
-          <div class = "mx-auto max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class = "mx-auto max-w-sm p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <img src = "assets/services.png" class = "h-12 mx-auto mb-5">
-            <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Range of Services</h5>
-            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">We offer a range of services, from application assistance to interview preparation, to ensure that you have everything you need to succeed.</p>
+            <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Range of Services</h5>
+            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">We offer a range of services, from application assistance to interview preparation, to ensure that you have everything you need to succeed.</p>
           </div>
-          <div class = "mx-auto max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class = "mx-auto max-w-sm p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <img src = "assets/commitment.png" class = "h-12 mx-auto mb-5">
-            <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Commitment to Excellence</h5>
-            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">At Aum Global Solutions, we are committed to providing the highest level of service and support to our clients.</p>
+            <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Commitment to Excellence</h5>
+            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">At Aum Global Solutions, we are committed to providing the highest level of service and support to our clients.</p>
           </div>
-          <div class = "mx-auto max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class = "mx-auto max-w-sm p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <img src = "assets/international.png" class = "h-12 mx-auto mb-5">
-            <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">International Experience</h5>
-            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Our consultants have experience working with students from around the world and can provide guidance on studying abroad in a foreign country.</p>
+            <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">International Experience</h5>
+            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">Our consultants have experience working with students from around the world and can provide guidance on studying abroad in a foreign country.</p>
           </div>
-          <div class = "mx-auto max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class = "mx-auto max-w-sm p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <img src = "assets/network.png" class = "h-12 mx-auto mb-5">
-            <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Extensive Network</h5>
-            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">We have an extensive network of connections with colleges and universities around the world, which allows us to provide you with valuable insights and information</p>
+            <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Extensive Network</h5>
+            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">We have an extensive network of connections with colleges and universities around the world, which allows us to provide you with valuable insights and information</p>
           </div>
-          <div class = "mx-auto max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class = "mx-auto max-w-sm p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <img src = "assets/pricing.png" class = "h-12 mx-auto mb-5">
-            <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Transparent Pricing</h5>
-            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Our pricing is transparent, and we provide clear information about the services we offer, so you know exactly what you're getting. </p>
+            <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Transparent Pricing</h5>
+            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">Our pricing is transparent, and we provide clear information about the services we offer, so you know exactly what you're getting. </p>
           </div>
-          <div class = "mx-auto max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class = "mx-auto max-w-sm p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <img src = "assets/support.png" class = "h-12 mx-auto mb-5">
-            <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Ongoing Support</h5>
-            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">We provide ongoing support throughout the entire educational journey, from initial consultation to graduation and beyond./p>
+            <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Ongoing Support</h5>
+            <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">We provide ongoing support throughout the entire educational journey, from initial consultation to graduation and beyond.</p>
           </div>
     </div>
 </div>
 
 <!--Journey-->
-<div>
-    <h2 style = "font-family: 'Lato', sans-serif;" class = "text-xl tracking-wide px-8 py-5 text-blue-900 lg:text-2xl text-center lg:py-12 lg:pb-8 font-bold mt-4">YOUR JOURNEY</h2>
-    <div>
-        <ul class = "list-disc">
-            <li>Research Well - <br /> Do thorough research about the universities, courses, and admission requirements.</li>
-        </ul>
-    </div>
+<div class = "bg-gray-100 pb-12">
+    <h2 style = "font-family: 'Lato', sans-serif;" class = "text-lg lg:text-2xl xl:text-3xl md:text-xl tracking-wide px-8 py-5 text-blue-900 lg:text-2xl text-center lg:py-12 lg:pb-8 font-bold mt-4">YOUR JOURNEY</h2>
+    <div class="relative w-full max-w-2xl overflow-hidden bg-white shadow-lg rounded-lg mx-auto my-4" style="font-family: 'Source Serif 4', serif;">
+      <div class="carousel-inner">
+          <div class="carousel-item flex flex-col items-center p-4">
+              <img src="assets/research.gif" alt="Image 1" class="w-full h-48 object-contain rounded-t-lg border-4">
+              <div class="mt-4 text-center">
+                  <h2 class="text-lg md:text-xl font-bold">Research Well</h2>
+                  <p class="mt-2 text-gray-600 text-sm md:text-base lg:text-lg">Do thorough research about the universities, courses, and admission requirements.</p>
+              </div>
+          </div>
+          <div class="carousel-item flex flex-col items-center p-4">
+              <img src="assets/document.gif" alt="Image 2" class="w-full h-48 object-contain rounded-t-lg border-4">
+              <div class="mt-4 text-center">
+                  <h2 class="text-lg md:text-xl font-bold">Collate Documents</h2>
+                  <p class="mt-2 text-gray-600 text-sm md:text-base lg:text-lg">Gather all the necessary documents for your university applications, such as transcripts, letters of recommendation, and test scores.</p>
+              </div>
+          </div>
+          <div class="carousel-item flex flex-col items-center p-4">
+              <img src="assets/submit.gif" alt="Image 3" class="w-full h-48 object-contain rounded-t-lg border-4">
+              <div class="mt-4 text-center">
+                  <h2 class="text-lg md:text-xl font-bold">Submit Applications to Universities</h2>
+                  <p class="mt-2 text-gray-600 text-sm md:text-base lg:text-lg">Submit your completed applications to the universities of your choice within the application deadlines.</p>
+              </div>
+          </div>
+          <div class="carousel-item flex flex-col items-center p-4">
+              <img src="assets/offer.gif" alt="Image 4" class="w-full h-48 object-contain rounded-t-lg border-4">
+              <div class="mt-4 text-center">
+                  <h2 class="text-lg md:text-xl font-bold">Receive University Offer/Acceptance</h2>
+                  <p class="mt-2 text-gray-600 text-sm md:text-base lg:text-lg">Wait for the universities to review your applications and receive offers or acceptances from the universities.</p>
+              </div>
+          </div>
+          <div class="carousel-item flex flex-col items-center p-4">
+              <img src="assets/visa.gif" alt="Image 5" class="w-full h-48 object-contain rounded-t-lg border-4">
+              <div class="mt-4 text-center">
+                  <h2 class="text-lg md:text-xl font-bold">Visa Application, Submission and Approval</h2>
+                  <p class="mt-2 text-gray-600 text-sm md:text-base lg:text-lg">Apply for a student visa, submit the required documents, and wait for the approval from the immigration authorities.</p>
+              </div>
+          </div>
+          <div class="carousel-item flex flex-col items-center p-4">
+              <img src="assets/departure.gif" alt="Image 6" class="w-full h-48 object-contain rounded-t-lg border-4">
+              <div class="mt-4 text-center">
+                  <h2 class="text-lg md:text-xl font-bold">Departure to Destination</h2>
+                  <p class="mt-2 text-gray-600 text-sm md:text-base lg:text-lg">Make necessary travel arrangements, pack your bags, and depart to your destination to start your academic journey!</p>
+              </div>
+          </div>
+      </div>
+      <button class="absolute top-1/2 transform -translate-y-1/2 left-4 bg-gray-800 text-white p-2 rounded-full" onclick="prevSlide()">&#10094;</button>
+      <button class="absolute top-1/2 transform -translate-y-1/2 right-4 bg-gray-800 text-white p-2 rounded-full" onclick="nextSlide()">&#10095;</button>
+  </div>
 </div>
+
+<!--FAQs-->
+<div class = "border-b-2 pb-8">
+  <h2 style = "font-family: 'Lato', sans-serif;" class = "text-lg lg:text-2xl xl:text-3xl md:text-xl tracking-wide px-8 py-5 text-blue-900 lg:text-2xl text-center lg:py-12 lg:pb-8 font-bold mt-4">FREQUENTLY ASKED QUESTIONS</h2>
+  
+<div id="accordion-collapse" data-accordion="collapse" class = "w-screen px-4 lg:w-4/5 mx-auto" style="font-family: 'Source Serif 4', serif;">
+  <h2 id="accordion-collapse-heading-1">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+      <span class = "text-left tracking-wide">What are the benefits of studying abroad?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Studying abroad can provide you with a wealth of benefits, including exposure to different cultures, language acquisition, personal growth and development, increased independence, and enhanced career opportunities.</p>
+    </div>
+  </div>
+  <h2 id="accordion-collapse-heading-2">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+      <span class = "text-left">What is the application process for studying abroad?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+      <p class="mb-2 text-gray-500 dark:text-gray-400">The application process for studying abroad typically involves researching and choosing a destination, identifying suitable institutions, submitting an application, and fulfilling visa requirements.</p>
+    </div>
+  </div>
+  <h2 id="accordion-collapse-heading-3">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+      <span class = "text-left">How much does it cost to study abroad?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <p class="mb-2 text-gray-500 dark:text-gray-400">The cost of studying abroad varies depending on the destination, institution, and course of study. It's important to factor in expenses such as tuition fees, living expenses, and travel costs.</p>
+    </div>
+  </div>
+  <h2 id="accordion-collapse-heading-4">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-4" aria-expanded="false" aria-controls="accordion-collapse-body-4">
+      <span class = "text-left">Can I receive financial aid or scholarships for studying abroad?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Yes, there are many scholarships and financial aid options available for students studying abroad. You can research and apply for these options through your chosen institution or through external organizations.</p>
+    </div>
+  </div>
+  <h2 id="accordion-collapse-heading-5">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-5" aria-expanded="false" aria-controls="accordion-collapse-body-5">
+      <span class = "text-left">What are the language requirements for studying abroad?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Language requirements vary depending on the destination and institution. Some institutions may require proficiency in the local language, while others offer courses in English or other languages.</p>
+    </div>
+  </div>
+  <h2 id="accordion-collapse-heading-6">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-6" aria-expanded="false" aria-controls="accordion-collapse-body-6">
+      <span class = "text-left">How long does the study abroad process take?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-collapse-body-6" class="hidden" aria-labelledby="accordion-collapse-heading-6">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <p class="mb-2 text-gray-500 dark:text-gray-400">The study abroad process can take several months to a year or more, depending on the destination and the application process. It's important to plan ahead and allow ample time for application and visa processing.</p>
+    </div>
+  </div>
+  <h2 id="accordion-collapse-heading-7">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-7" aria-expanded="false" aria-controls="accordion-collapse-body-7">
+      <span class = "text-left">What are the benefits of working with an educational consultant?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-collapse-body-7" class="hidden" aria-labelledby="accordion-collapse-heading-7">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Working with an educational consultant can provide you with personalized guidance and support throughout the entire process, from choosing a destination to applying and settling in. Consultants can offer valuable insights and advice to help you make the most of your educational experience.</p>
+    </div>
+  </div>
+  <h2 id="accordion-collapse-heading-8">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-8" aria-expanded="false" aria-controls="accordion-collapse-body-8">
+      <span class = "text-left">Is it free of cost to get admission with the help of Aum Global Solutions?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-collapse-body-8" class="hidden" aria-labelledby="accordion-collapse-heading-8">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Yes, our services for helping students get admission in domestic colleges in India are completely free of cost. We do not charge any fees from students for our services.</p>
+    </div>
+  </div>
+  <h2 id="accordion-collapse-heading-9">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-9" aria-expanded="false" aria-controls="accordion-collapse-body-9">
+      <span class = "text-left">Will Aum Global Solutions make the admission process hassle-free for me?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-collapse-body-9" class="hidden" aria-labelledby="accordion-collapse-heading-9">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Yes, we strive to make the admission process as hassle-free as possible for our students. We provide guidance and support throughout the entire process, from choosing the right college to applying and settling in.</p>
+    </div>
+  </div>
+  <h2 id="accordion-collapse-heading-10">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-10" aria-expanded="false" aria-controls="accordion-collapse-body-10">
+      <span class = "text-left">Are there any discounts available if I use Aum Global Solutions to get admission in domestic colleges in India?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-collapse-body-10" class="hidden" aria-labelledby="accordion-collapse-heading-10">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Yes, we offer various discounts and promotions to our students to help them save on their education expenses.</p>
+    </div>
+  </div>
+  <h2 id="accordion-collapse-heading-11">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-11" aria-expanded="false" aria-controls="accordion-collapse-body-11">
+      <span class = "text-left">Can Aum Global Solutions guarantee 100% seat availability in domestic colleges in India?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-collapse-body-11" class="hidden" aria-labelledby="accordion-collapse-heading-11">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <p class="mb-2 text-gray-500 dark:text-gray-400">We cannot guarantee 100% seat availability, as admission to domestic colleges in India is based on merit and availability of seats. However, we will work with you to find the best possible options and increase your chances of getting admission.</p>
+    </div>
+  </div>
+  <h2 id="accordion-collapse-heading-12">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-12" aria-expanded="false" aria-controls="accordion-collapse-body-12">
+      <span class = "text-left">Will Aum Global Solutions provide local guidance during the admission process in domestic colleges in India?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-collapse-body-12" class="hidden" aria-labelledby="accordion-collapse-heading-12">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Yes, we have a team of experienced counselors who provide local guidance and support to our students throughout the admission process. We have in-depth knowledge about the domestic college system in India and can help you navigate the process with ease.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--Registration Form-->
+
+  <div class = "h-max flex justify-center py-20">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexwHJJgFiasgsNg-6GK5Vz2nz_EKUKXHyZM4Z5Qm-VXBPo_A/viewform?embedded=true" width="640" height="780" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
 
 
 <!-- Footer -->
 <footer class = "h-max bg-cyan-800 w-screen text-white">
-  <div class="flex flex-col lg:flex-row h-max w-screen justify-between p-2 pl-12 pt-5 text-base lg:text-xl">
+  <div class="flex flex-col md:flex-col lg:flex-row xl:flex-row h-max w-screen justify-between p-2 pl-4 lg:pl-12 pt-5 text-sm md:text-lg lg:text-xl">
     <div>
       <p class = "underline mt-2"> Contact Details</p>
       <p class = "pt-2"> Address: 
@@ -259,25 +481,35 @@
     <div>
       <p class = "underline mt-2">Links</p>
       <ul>
-        <li><a href = "about.html">About us</a></li>
-        <li><a href = "home.html#services">HR Solutions</a></li>
+        <li><a href = "about.html">About Us</a></li>
+        <li><a href = "index.html#hr-services">HR Solutions</a></li>
         <li><a href = "education.html">Education</a></li>
         <li><a href = "career.html">Career Counselling</a></li>
         <li><a href = "contact.html">Contact Us</a></li>
-        <li><a href = "home.html#upload-resume">Upload Resume</a></li>
+        <li><a href = "index.html#upload-resume">Upload Resume</a></li>
         </ul>
     </div>
     <div>
-      <img src = "assets/footer.png" class = "h-64 w-auto opacity-80">
+      <img src = "assets/footer.png" class = "lg:h-64 h-48 md:h-60 lg:mr-1 mx-auto md:mx-auto w-auto opacity-80">
     </div>
   </div>
 
   <div class = "flex content-center justify-center w-screen">
-    <img src = "assets/instagram (1).png" class = "h-10 m-8">
-    <img src = "assets/facebook (2).png" class = "h-10 m-8">
-    <img src = "assets/linkedin (1).png" class = "h-10 m-8">
+    <a href = "https://www.instagram.com/aumglobalsolutions/" target="_blank"><img src = "assets/instagram (1).png" class = "lg:h-10 lg:m-8 h-6 m-4"></a>
+    <a href = "https://www.facebook.com/people/Aum-Global-Solutions/100082984730050/" target="_blank"><img src = "assets/facebook (2).png" class = "lg:h-10 lg:m-8 h-6 m-4"></a>
+    <a href = "https://www.linkedin.com/company/aum-globalsolution/" target="_blank"><img src = "assets/linkedin (1).png" class = "lg:h-10 lg:m-8 h-6 m-4"></a>
   </div>
+
+  <p class="text-xs md:text-sm p-4 text-center text-gray-400">
+    <span>Designed & Developed by <a href = "https://m3ghnaa.github.io/" target="_blank" class = "underline">Meghna Chandra</a></span>
+  </p>
 </footer>
+
+<!-- Whatsapp Icon -->
+
+<div class = "fixed bottom-5 right-5 z-50 flex items-center inline-block">
+  <a href = "https://wa.me/917383071056" target = "_blank"><img src = "assets/whatsapp.png" class = "h-10 md:h-16"></a>
+</div>
 
 <script>
 
@@ -351,6 +583,83 @@
           if (event.target == modal) modalClose();
         }
       }
+
+      //Your journey carousel
+      let currentIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-item');
+            const totalSlides = slides.length;
+            if (index >= totalSlides) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else {
+                currentIndex = index;
+            }
+            const offset = -currentIndex * 100;
+            document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        // Initialize the carousel
+        showSlide(currentIndex);
+  
+
+      //FAQ accordion
+    document.addEventListener('DOMContentLoaded', function () {
+        const accordions = document.querySelectorAll('[data-accordion="collapse"]');
+
+        accordions.forEach(accordion => {
+            const buttons = accordion.querySelectorAll('button[data-accordion-target]');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-accordion-target');
+                    const targetElement = document.querySelector(targetId);
+
+                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                    button.setAttribute('aria-expanded', !isExpanded);
+                    targetElement.classList.toggle('hidden');
+
+                    // Toggle the expanded-question class
+                    button.classList.toggle('text-orange-600', isExpanded);
+
+                    // Rotate the icon
+                    const icon = button.querySelector('[data-accordion-icon]');
+                    if (icon) {
+                        icon.classList.toggle('rotate-180', !isExpanded);
+                    }
+
+                    // Close other panels in the same accordion
+                    if (!isExpanded) {
+                        buttons.forEach(otherButton => {
+                            if (otherButton !== button) {
+                                const otherTargetId = otherButton.getAttribute('data-accordion-target');
+                                const otherTargetElement = document.querySelector(otherTargetId);
+                                otherButton.setAttribute('aria-expanded', false);
+                                otherTargetElement.classList.add('hidden');
+
+                                // Rotate the other icons back
+                                const otherIcon = otherButton.querySelector('[data-accordion-icon]');
+                                if (otherIcon) {
+                                    otherIcon.classList.remove('rotate-180');
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    });
+
 </script>
 
 </body>

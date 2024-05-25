@@ -64,89 +64,79 @@
 
 
 <body>
-	<nav class="sticky top-0 z-50 shadow relative px-4 py-4 flex justify-between items-center bg-white tracking-wide text-blue-900" style = "font-family: 'Imprima', sans-serif;">
-		<a class="text-3xl font-bold leading-none" href="#">
-			<img src = "assets/logo1.png" class = "h-16 w-16">
-		</a>
-		<div class="lg:hidden">
-			<button class="navbar-burger flex items-center text-blue-600 p-3">
-				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-					<title>Mobile menu</title>
-					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-				</svg>
-			</button>
-		</div>
-		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="index.html#hr-services" >HR SERVICES</a></li>
-			<li class="text-gray-300">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-				</svg>
-			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">ABOUT</a></li>
-			<li class="text-gray-300">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-				</svg>
-			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">CAREER COUNSELING</a></li>
-			<li class="text-gray-300">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-				</svg>
-			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">EDUCATION</a></li>
-			<li class="text-gray-300">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-				</svg>
-			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="#">Contact Us</a></li>
-		</ul>
+  <!--Navbar-->
+  <nav class="sticky top-0 z-50 shadow relative lg:px-4 lg:py-6 px-2 py-4 md:px-4 md:py-4 flex justify-between items-center bg-white/50 tracking-wide text-blue-900 backdrop-blur-xl" style = "font-family: 'Imprima', sans-serif;">
+    <a class="text-3xl font-bold leading-none" href="index.html">
+      <img src = "assets/logo1.png" class = "xl:h-14 xl:w-14 lg:h-12 lg:w-12 md:h-10 md:w-10 h-8 w-8 inline"> 
+      <p class = "text-sm lg:text-base xl:text-xl md:text-xl text-light inline pl-2" style = "font-family: 'Lato', sans-serif;"> Aum Global Solutions</p>
+    </a>
+    
+    <div class="lg:hidden">
+      <button class="navbar-burger flex items-center text-blue-600 p-3">
+        <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Mobile menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+        </svg>
+      </button>
+    </div>
+    <ul class="hidden absolute pl-6 top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-3">
+      <li><a class="text-xs md:text-xs lg:text-sm  text-black-400 hover:text-orange-500" href="#hr-services" >HR SERVICES</a></li>
+      <li class="text-gray-300">
+      </li>
+      <li><a class="text-xs md:text-xs lg:text-sm  text-black-400 hover:text-orange-500" href="about.html">ABOUT</a></li>
+      <li class="text-gray-300">
+      </li>
+      <li><a class="text-xs md:text-xs lg:text-sm  text-black-400 hover:text-orange-500" href="career.html">CAREER COUNSELLING</a></li>
+      <li class="text-gray-300">
+      </li>
+      <li><a class="text-xs md:text-xs lg:text-sm  text-black-400 hover:text-orange-500" href="education.html">EDUCATION</a></li>
+      <li class="text-gray-300">
+      </li>
+      <li><a class="text-xs md:text-xs lg:text-sm  text-black-400 hover:text-orange-500" href="contact.html">CONTACT</a></li>
+    </ul>
     <button onclick="openModal()" class='hidden lg:inline-block py-2 px-6 bg-orange-400 hover:bg-orange-600 text-md text-white font-bold rounded-xl transition duration-200'>CURRENT JOBS</button>
-	</nav>
-	<div class="navbar-menu relative z-50 hidden" style = "font-family: 'Imprima', sans-serif;">
-		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
-			<div class="flex items-center mb-8">
-				<a class="mr-auto text-3xl font-bold leading-none" href="#">
-					<img src = "assets/logo1.png" class = "h-12">
-				</a>
-				<button class="navbar-close">
-					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-					</svg>
-				</button>
-			</div>
-			<div>
-				<ul>
-					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="index.html#hr-services">HR Services</a>
-					</li>
-					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">About Us</a>
-					</li>
-					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Career Counselling</a>
-					</li>
-					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Education</a>
-					</li>
-					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Contact Us</a>
-					</li>
-				</ul>
-			</div>
-			<div class="mt-auto">
-				<div>
-          <button onclick="openModal()" class='block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-orange-400 hover:bg-orange-600  rounded-xl'>CURRENT JOBS</button>
+  </nav>
+  <div class="navbar-menu relative z-50 hidden" style = "font-family: 'Imprima', sans-serif;">
+    <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+    <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+      <div class="flex items-center mb-8">
+        <a class="mr-auto text-3xl font-bold leading-none" href="#">
+          <img src = "assets/logo1.png" class = "h-8 w-8">
+        </a>
+        <button class="navbar-close">
+          <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div>
+        <ul>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="index.html#hr-services">HR Services</a>
+          </li>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">About</a>
+          </li>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Career Counselling</a>
+          </li>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Education</a>
+          </li>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mt-auto">
+        <div>
+          <button onclick="openModal()" class='block px-4 py-2 mb-2 leading-loose text-xs text-center text-white font-semibold bg-orange-400 hover:bg-orange-600  rounded-xl'>CURRENT JOBS</button>
         </div>
-				<p class="my-4 text-xs text-center text-gray-400">
-					<span>Copyright © 2021</span>
-				</p>
-			</div>
-		</nav>
-	</div>
+        
+      </div>
+    </nav>
+  </div>
+
 
  
 
@@ -171,7 +161,7 @@
       </div>
       <!--Body-->
       <div class="my-5">
-        <p>This feature is not yet active. You can <a href = "#upload-resume" class = "underline">upload your resume</a> and we will get back to you at the earliest!</p>
+        <p>This feature is not yet active. You can <a href = "index.html#upload-resume" class = "underline">upload your resume</a> and we will get back to you at the earliest!</p>
       </div>
       <!--Footer-->
       <div class="flex justify-end pt-2">
@@ -185,8 +175,12 @@
 <!--Main content-->
 
 <div class = "content">
-    <h2 class = "text-3xl text-center py-12 font-bold tracking-wider text-blue-900" style = "font-family: 'Lato', sans-serif;"> Training and Development </h2>
-    <div class = "px-8 md:px-14 lg:px-72 text-gray-700 leading-10 tracking-wide mb-20 text-base md:text-lg lg:text-xl" >
+    <h2 style = "font-family: 'Lato', sans-serif;" class = "text-lg lg:text-2xl md:text-xl tracking-wide px-8 py-5 text-blue-900 text-center lg:py-12 lg:pb-8 font-bold mt-4"> Training and Development </h2>
+    <div class = "w-5/6 px-4 xl:w-3/5 xl:px-20 mx-auto bg-gray-100 py-4 border-l-8 border-gray-400">
+      <img src = "assets/quote.png" class = "lg:h-10 h-8">
+      <p class = "text-cyan-800 font-bold text-base lg:text-lg" style = "font-family: 'Imprima', sans-serif;"> Training and development are not just a means to enhance skills, they are the keys to unlocking the potential of individuals and organizations, igniting a spark of innovation and progress that leads to a brighter future for all.</p>
+    </div>
+    <div class = "px-8 md:w-4/5 md:px-2 lg:w-3/4 lg:px-4 xl:w-3/5 xl:px-6 mx-auto md:leading-7 lg:leading-8 leading-2 tracking-wide mb-20 text-base md:text-lg lg:text-xl text-gray-700"  >
     <p class = "py-3">At Aum Global Solutions, we are committed to providing high-quality training and development programs that meet the specific needs of organizations and their employees. Whether you are looking to develop soft skills, technical skills, leadership skills, or sales and marketing skills, we have the expertise and resources to help you achieve your goals.</p>
     <p class = "py-3 font-bold">Communication Skills Training Module:</p>
     <p class = "py-3">Effective communication is essential in any business, and our training module on communication skills can help employees to improve their ability to communicate effectively in both verbal and written formats. In this module, we will cover the following topics:</p>
@@ -209,7 +203,7 @@
     <ul class = "list-disc pl-8">
         <li class = "py-2">Prioritization</li>
         <li class = "py-2">Goal Setting</li>
-        <li class = "py-2">CTechnology Tools</li>
+        <li class = "py-2">Technology Tools</li>
     </ul>
     <p class = "py-3 font-bold">Project Management Training Module:</p>
     <p class = "py-3">Our project management module can help employees to develop their project management skills, including planning, scheduling, budgeting, and risk management. In this module, we will cover the following topics:</p>
@@ -246,9 +240,9 @@
 
 <!-- Footer -->
 <footer class = "h-max bg-cyan-800 w-screen text-white">
-  <div class="flex flex-col lg:flex-row h-max w-screen justify-between p-2 pl-12 pt-5">
+  <div class="flex flex-col md:flex-col lg:flex-row xl:flex-row h-max w-screen justify-between p-2 pl-4 lg:pl-12 pt-5 text-sm md:text-lg lg:text-xl">
     <div>
-      <p class = "text-xl underline mt-2"> Contact Details</p>
+      <p class = "underline mt-2"> Contact Details</p>
       <p class = "pt-2"> Address: 
         G-1, Balaji Homes, Coastal Hwy, <br />
         near daman polyclinic, Dunetha, Daman, <br /> 
@@ -261,27 +255,37 @@
             info@aumglobalsolutions.com</p>
     </div>
     <div>
-      <p class = "text-xl underline mt-2">Links</p>
+      <p class = "underline mt-2">Links</p>
       <ul>
-        <li><a href = "about.html">About us</a></li>
-        <li><a href = "home.html#services">HR Solutions</a></li>
+        <li><a href = "about.html">About Us</a></li>
+        <li><a href = "index.html#hr-services">HR Solutions</a></li>
         <li><a href = "education.html">Education</a></li>
         <li><a href = "career.html">Career Counselling</a></li>
         <li><a href = "contact.html">Contact Us</a></li>
-        <li><a href = "home.html#upload-resume">Upload Resume</a></li>
+        <li><a href = "index.html#upload-resume">Upload Resume</a></li>
         </ul>
     </div>
     <div>
-      <img src = "assets/footer.png" class = "h-64 w-auto opacity-80">
+      <img src = "assets/footer.png" class = "lg:h-64 h-48 md:h-60 lg:mr-1 mx-auto md:mx-auto w-auto opacity-80">
     </div>
   </div>
 
   <div class = "flex content-center justify-center w-screen">
-    <img src = "assets/instagram (1).png" class = "h-10 m-8">
-    <img src = "assets/facebook (2).png" class = "h-10 m-8">
-    <img src = "assets/linkedin (1).png" class = "h-10 m-8">
+    <a href = "https://www.instagram.com/aumglobalsolutions/" target="_blank"><img src = "assets/instagram (1).png" class = "lg:h-10 lg:m-8 h-6 m-4"></a>
+    <a href = "https://www.facebook.com/people/Aum-Global-Solutions/100082984730050/" target="_blank"><img src = "assets/facebook (2).png" class = "lg:h-10 lg:m-8 h-6 m-4"></a>
+    <a href = "https://www.linkedin.com/company/aum-globalsolution/" target="_blank"><img src = "assets/linkedin (1).png" class = "lg:h-10 lg:m-8 h-6 m-4"></a>
   </div>
+
+  <p class="text-xs md:text-sm p-4 text-center text-gray-400">
+    <span>Designed & Developed by <a href = "https://m3ghnaa.github.io/" target="_blank" class = "underline">Meghna Chandra</a></span>
+  </p>
 </footer>
+
+<!-- Whatsapp Icon -->
+
+<div class = "fixed bottom-5 right-5 z-50 flex items-center inline-block">
+  <a href = "https://wa.me/917383071056" target = "_blank"><img src = "assets/whatsapp.png" class = "h-10 md:h-16"></a>
+</div>
 
 <script>
 

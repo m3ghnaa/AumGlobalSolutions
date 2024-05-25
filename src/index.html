@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Imprima&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Imprima&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
     <title>Aum Global Solutions</title>
 
     <style>
@@ -151,12 +151,16 @@ footer a {
 
     </style>
 </head>
-<!-- component -->
+
 <body>
-	<nav class="sticky top-0 z-50 shadow relative px-4 py-4 flex justify-between items-center bg-white tracking-wide text-blue-900" style = "font-family: 'Imprima', sans-serif;">
+
+<!--Navbar-->
+	<nav class="sticky top-0 z-50 shadow relative lg:px-4 lg:py-6 px-2 py-4 md:px-4 md:py-4 flex justify-between items-center bg-white/50 tracking-wide text-blue-900 backdrop-blur-xl" style = "font-family: 'Imprima', sans-serif;">
 		<a class="text-3xl font-bold leading-none" href="#">
-			<img src = "assets/logo1.png" class = "h-16 w-16">
+			<img src = "assets/logo1.png" class = "xl:h-14 xl:w-14 lg:h-12 lg:w-12 md:h-10 md:w-10 h-8 w-8 inline"> 
+      <p class = "text-sm lg:text-base xl:text-xl md:text-xl text-light inline pl-2" style = "font-family: 'Lato', sans-serif;"> Aum Global Solutions</p>
 		</a>
+    
 		<div class="lg:hidden">
 			<button class="navbar-burger flex items-center text-blue-600 p-3">
 				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -165,20 +169,20 @@ footer a {
 				</svg>
 			</button>
 		</div>
-		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="#hr-services" >HR SERVICES</a></li>
+		<ul class="hidden absolute pl-6 top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-3">
+			<li><a class="text-xs md:text-xs lg:text-sm  text-black-400 hover:text-orange-500" href="#hr-services" >HR SERVICES</a></li>
 			<li class="text-gray-300">
 			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="about.html">ABOUT</a></li>
+			<li><a class="text-xs md:text-xs lg:text-sm  text-black-400 hover:text-orange-500" href="about.html">ABOUT</a></li>
 			<li class="text-gray-300">
 			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="career.html">CAREER COUNSELING</a></li>
+			<li><a class="text-xs md:text-xs lg:text-sm  text-black-400 hover:text-orange-500" href="career.html">CAREER COUNSELLING</a></li>
 			<li class="text-gray-300">
 			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="education.html">EDUCATION</a></li>
+			<li><a class="text-xs md:text-xs lg:text-sm  text-black-400 hover:text-orange-500" href="education.html">EDUCATION</a></li>
 			<li class="text-gray-300">
 			</li>
-			<li><a class="text-md text-black-400 hover:text-orange-500" href="contact.html">CONTACT</a></li>
+			<li><a class="text-xs md:text-xs lg:text-sm  text-black-400 hover:text-orange-500" href="contact.html">CONTACT</a></li>
 		</ul>
     <button onclick="openModal()" class='hidden lg:inline-block py-2 px-6 bg-orange-400 hover:bg-orange-600 text-md text-white font-bold rounded-xl transition duration-200'>CURRENT JOBS</button>
 	</nav>
@@ -187,7 +191,7 @@ footer a {
 		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
 			<div class="flex items-center mb-8">
 				<a class="mr-auto text-3xl font-bold leading-none" href="#">
-					<img src = "assets/logo1.png" class = "h-12">
+					<img src = "assets/logo1.png" class = "h-8 w-8">
 				</a>
 				<button class="navbar-close">
 					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -201,26 +205,23 @@ footer a {
 						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="index.html#hr-services">HR Services</a>
 					</li>
 					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">About Us</a>
+						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="about.html">About</a>
 					</li>
 					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Career Counselling</a>
+						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="career.html">Career Counselling</a>
 					</li>
 					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Education</a>
+						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="education.html">Education</a>
 					</li>
 					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="#">Contact Us</a>
+						<a class="block p-4 text-sm font-semibold text-blue-900  hover:text-orange-500 rounded" href="contact.html">Contact</a>
 					</li>
 				</ul>
 			</div>
 			<div class="mt-auto">
 				<div>
-          <button onclick="openModal()" class='block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-orange-400 hover:bg-orange-600  rounded-xl'>CURRENT JOBS</button>
+          <button onclick="openModal()" class='block px-4 py-2 mb-2 leading-loose text-xs text-center text-white font-semibold bg-orange-400 hover:bg-orange-600  rounded-xl'>CURRENT JOBS</button>
         </div>
-				<p class="my-4 text-xs text-center text-gray-400">
-					<span>Copyright © 2021</span>
-				</p>
 			</div>
 		</nav>
 	</div>
@@ -268,85 +269,85 @@ footer a {
 </div>
 
 <!-- HR Services-->
-<div class = "bg-gray-100 px-12" >
-<h2 class = "text-3xl text-center py-12 font-bold tracking-wider text-blue-900" style = "font-family: 'Lato', sans-serif;"> HR SERVICES </h2>
+<div class = "bg-gray-100 lg:px-12 px-2 md:px-6 mx-auto" >
+<h2 style = "font-family: 'Lato', sans-serif;" class = "text-lg lg:text-2xl xl:text-3xl md:text-xl tracking-wide px-8 py-5 text-blue-900 text-center lg:py-12 lg:pb-8 font-bold mt-4"> HR SERVICES </h2>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 content-center" id = "hr-services">
-  <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 content-center">
+  <div class = "max-w-sm mx-auto p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/staffing.png" class = "h-12 mx-auto mb-5">
-    <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Staffing and Recruitment Services</h5>
-    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">At Aum Global Solutions, we understand that finding the right talent for your organization is crucial for success. </p>
-    <a href = "staffing.html" class=" py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Staffing and Recruitment Services</h5>
+    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">At Aum Global Solutions, we understand that finding the right talent for your organization is crucial for success. </p>
+    <a href = "staffing.html" class=" py-2 lg:text-sm text-xs font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
-  <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class = "max-w-sm mx-auto p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" id = "hr-services">
     <img src = "assets/payroll.png" class = "h-12 mx-auto mb-5">
-    <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Payroll Outsourcing</h5>
-    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Welcome to Aum Global Solutions, your reliable partner for payroll outsourcing services in India.  </p>
-    <a href="payroll.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Payroll Outsourcing</h5>
+    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">Welcome to Aum Global Solutions, your reliable partner for payroll outsourcing services in India.  </p>
+    <a href="payroll.html" class="py-2 lg:text-sm text-xs font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
-  <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class = "max-w-sm mx-auto p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/contract.png" class = "h-12 mx-auto mb-5">
-    <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Contract Labour Supply</h5>
-    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">At Aum Global Solutions, we understand the importance of contract labour in any organization. </p>
-    <a href="contract.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Contract Labour Supply</h5>
+    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">At Aum Global Solutions, we understand the importance of contract labour in any organization. </p>
+    <a href="contract.html" class="py-2 lg:text-sm text-xs font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
-  <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class = "max-w-sm mx-auto p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/outsourcing.png" class = "h-12 mx-auto mb-5">
-    <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Complete HR Outsourcing</h5>
-    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Whether you need complete HR outsourcing solutions or specific part HR outsourcing services, Aum Global Solutions has the expertise... </p>
-    <a href="hr-outsourcing.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Complete HR Outsourcing</h5>
+    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">Whether you need complete HR outsourcing solutions or specific part HR outsourcing services, Aum Global Solutions has the expertise... </p>
+    <a href="hr-outsourcing.html" class="py-2 lg:text-sm text-xs font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
-  <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class = "max-w-sm mx-auto p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/mass.png" class = "h-12 mx-auto mb-5">
-    <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Mass Hiring</h5>
-    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">At Aum Global Solutions, we understand that rapid business growth can lead to an urgent need for talent. </p>
-    <a href="mass-hiring.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Mass Hiring</h5>
+    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">At Aum Global Solutions, we understand that rapid business growth can lead to an urgent need for talent. </p>
+    <a href="mass-hiring.html" class="py-2 lg:text-sm text-xs font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
-  <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class = "max-w-sm mx-auto p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/training.png" class = "h-12 mx-auto mb-5">
-    <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Training and Development</h5>
-    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">At Aum Global Solutions, we are committed to providing high-quality training and development programs that meet the specific needs of organizations and their employees. </p>
-    <a href="training.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Training and Development</h5>
+    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">At Aum Global Solutions, we are committed to providing high-quality training and development programs that meet the specific needs of organizations and their employees. </p>
+    <a href="training.html" class="py-2 lg:text-sm text-xs font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
-  <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class = "max-w-sm mx-auto p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/overseas.png" class = "h-12 mx-auto mb-5">
-    <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Overseas Recruitment</h5>
-    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Aum Global Solutions is a leading international recruitment agency, dedicated to connecting businesses with top talent from around the world. </p>
-    <a href="overseas.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Overseas Recruitment</h5>
+    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">Aum Global Solutions is a leading international recruitment agency, dedicated to connecting businesses with top talent from around the world. </p>
+    <a href="overseas.html" class="py-2 lg:text-sm text-xs font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
-  <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class = "max-w-sm mx-auto p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/hr setup.png" class = "h-12 mx-auto mb-5">
-    <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">HR Function Setup</h5>
-    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Aum Global Solutions is committed to helping businesses in India establish an effective and efficient HR function that aligns... </p>
-    <a href="hr-function.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">HR Function Setup</h5>
+    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">Aum Global Solutions is committed to helping businesses in India establish an effective and efficient HR function that aligns... </p>
+    <a href="hr-function.html" class="py-2 lg:text-sm text-xs font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
-  <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class = "max-w-sm mx-auto p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/statutory.jpeg" class = "h-12 mx-auto mb-5">
-    <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Statutory Compliance</h5>
-    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">At Aum Global Solutions, we understand that complying with labour laws, social compliance, PF laws, gratuity laws, and HR-related audits... </p>
-    <a href="statutory.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Statutory Compliance</h5>
+    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">At Aum Global Solutions, we understand that complying with labour laws, social compliance, PF laws, gratuity laws, and HR-related audits... </p>
+    <a href="statutory.html" class="py-2 lg:text-sm text-xs font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
-  <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class = "max-w-sm mx-auto p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/recruitment.jpeg" class = "h-12 mx-auto mb-5">
-    <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Recruitment Process Outsourcing</h5>
-    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Recruitment is a critical function in any organization, and it requires considerable time and resources to ensure that the right candidates... </p>
-    <a href="recruitment-process.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Recruitment Process Outsourcing</h5>
+    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">Recruitment is a critical function in any organization, and it requires considerable time and resources to ensure that the right candidates... </p>
+    <a href="recruitment-process.html" class="py-2 lg:text-sm text-xs font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 
-  <div class = "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class = "max-w-sm mx-auto p-4 lg:p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <img src = "assets/cv.jpeg" class = "h-12 mx-auto mb-5">
-    <h5 class = "mb-5 text-xl text-blue-900 tracking-wide">Professional CV Writing</h5>
-    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Aum Global Solutions is dedicated to helping candidates present themselves in the best possible light through our Professional CV Writing services. </p>
-    <a href="cv-writing.html" class="py-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
+    <h5 class = "mb-5 lg:text-xl md:text-lg text-base text-blue-900 tracking-wide" style = "font-family: 'Lato', sans-serif;">Professional CV Writing</h5>
+    <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 text-sm lg:text-base">Aum Global Solutions is dedicated to helping candidates present themselves in the best possible light through our Professional CV Writing services. </p>
+    <a href="cv-writing.html" class="py-2 lg:text-sm text-xs font-medium text-center text-orange-500 hover:bg-orange-700 hover:text-white hover:px-4">Read more</a>
   </div>
 </div>
 </div>
@@ -355,7 +356,7 @@ footer a {
 <!-- Industries we serve -->
 <section class = "w-full px-5  bg-blue-900 my-5">
   <div class="carousel__wrapper mx-auto h-auto">
-    <h1 class="carousel__header text-center text-3xl font-bold text-white tracking-wider" style = "font-family: 'Lato', sans-serif;">INDUSTRIES WE SERVE</h1>
+    <h1 class="carousel__header text-center text-lg lg:text-2xl xl:text-3xl md:text-xl font-bold text-white tracking-wider" style = "font-family: 'Lato', sans-serif;">INDUSTRIES WE SERVE</h1>
     <div class="carousel__nav text-end px-10">
       <div class="carousel__nav__item" data-direction="prev">
         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
@@ -442,16 +443,16 @@ footer a {
 <!-- About us-->
 <div class = "h-full shadow-lg">
   
-  <div class = "flex flex-col md:flex-row h-max w-screen items-center content-between">
+  <div class = "flex flex-col md:flex-col lg:flex-row h-max w-screen items-center content-between">
   <div class = "w-full content-center">
-    <img src = "assets/team.jpg" class = "object-cover m-5 rounded-lg h-72 lg:h-96 md:80">
+    <img src = "assets/team.jpg" class = "object-cover px-2 rounded-lg h-68 lg:h-96 md:80">
   </div>
-  <div class = "w-full">
-    <h2 class = "text-3xl text-center py-12 font-bold text-blue-900 tracking-wider" style = "font-family: 'Lato', sans-serif;">ABOUT US</h2>
-    <p class = "text-base px-16 text-gray-600 leading-6">From a client's perspective, we understand the challenges of navigating the ever-evolving job market and business landscape. That's why we work tirelessly to provide you with the tools and support you need to reach your full potential. 
+  <div class = "w-full mb-8 py-2">
+    <h2 style = "font-family: 'Lato', sans-serif;" class = "text-lg lg:text-2xl xl:text-3xl md:text-xl tracking-wide px-8 py-5 text-blue-900 lg:text-2xl text-center lg:py-12 lg:pb-8 font-bold mt-4">ABOUT US</h2>
+    <p style = "font-family: 'Source Serif 4', serif;" class = "text-base md:text-lg lg:px-16 md:px-12 px-8 text-gray-600 leading-6 lg:leading-7 text-gray-600">From a client's perspective, we understand the challenges of navigating the ever-evolving job market and business landscape. That's why we work tirelessly to provide you with the tools and support you need to reach your full potential. 
       Whether you're an individual seeking to take your career to the next level or a business looking to drive growth and success, we're here to help.
       At Aum Global Solutions, we're passionate about what we do and we're committed to delivering results. Our team of experts is dedicated to providing you with a seamless, worry-free experience that empowers you to reach your goals and achieve success. So why wait?
-       Join us today and discover a world of possibilities! <button class="text-center p-2 text-sm font-medium text-center text-orange-500 hover:bg-orange-600 hover:text-white">Read more</button></p>
+       Join us today and discover a world of possibilities! <br /> <a href = "about.html" class="text-center p-2 text-sm md:text-base font-medium text-center text-orange-500 hover:bg-orange-600 hover:text-white">Read more</a></p>
        
   </div>
   </div>
@@ -479,7 +480,7 @@ scrolling="no"
 
 <!-- Footer -->
 <footer class = "h-max bg-cyan-800 w-screen text-white">
-  <div class="flex flex-col lg:flex-row h-max w-screen justify-between p-2 pl-12 pt-5 text-base lg:text-xl">
+  <div class="flex flex-col md:flex-col lg:flex-row xl:flex-row h-max w-screen justify-between p-2 pl-4 lg:pl-12 pt-5 text-sm md:text-lg lg:text-xl">
     <div>
       <p class = "underline mt-2"> Contact Details</p>
       <p class = "pt-2"> Address: 
@@ -496,30 +497,34 @@ scrolling="no"
     <div>
       <p class = "underline mt-2">Links</p>
       <ul>
-        <li><a href = "about.html">About us</a></li>
-        <li><a href = "home.html#services">HR Solutions</a></li>
+        <li><a href = "about.html">About Us</a></li>
+        <li><a href = "index.html#hr-services">HR Solutions</a></li>
         <li><a href = "education.html">Education</a></li>
         <li><a href = "career.html">Career Counselling</a></li>
         <li><a href = "contact.html">Contact Us</a></li>
-        <li><a href = "home.html#upload-resume">Upload Resume</a></li>
+        <li><a href = "index.html#upload-resume">Upload Resume</a></li>
         </ul>
     </div>
     <div>
-      <img src = "assets/footer.png" class = "h-64 w-auto opacity-80">
+      <img src = "assets/footer.png" class = "lg:h-64 h-48 md:h-60 lg:mr-1 mx-auto md:mx-auto w-auto opacity-80">
     </div>
   </div>
 
   <div class = "flex content-center justify-center w-screen">
-    <img src = "assets/instagram (1).png" class = "h-10 m-8">
-    <img src = "assets/facebook (2).png" class = "h-10 m-8">
-    <img src = "assets/linkedin (1).png" class = "h-10 m-8">
+    <a href = "https://www.instagram.com/aumglobalsolutions/" target="_blank"><img src = "assets/instagram (1).png" class = "lg:h-10 lg:m-8 h-6 m-4"></a>
+    <a href = "https://www.facebook.com/people/Aum-Global-Solutions/100082984730050/" target="_blank"><img src = "assets/facebook (2).png" class = "lg:h-10 lg:m-8 h-6 m-4"></a>
+    <a href = "https://www.linkedin.com/company/aum-globalsolution/" target="_blank"><img src = "assets/linkedin (1).png" class = "lg:h-10 lg:m-8 h-6 m-4"></a>
   </div>
+
+  <p class="text-xs md:text-sm p-4 text-center text-gray-400">
+    <span>Designed & Developed by <a href = "https://m3ghnaa.github.io/" target="_blank" class = "underline">Meghna Chandra</a></span>
+  </p>
 </footer>
 
 <!-- Whatsapp Icon -->
 
 <div class = "fixed bottom-5 right-5 z-50 flex items-center inline-block">
-  <a href = "https://wa.me/917383071056" target = "_blank"><img src = "assets/whatsapp.png" class = "h-16"></a>
+  <a href = "https://wa.me/917383071056" target = "_blank"><img src = "assets/whatsapp.png" class = "h-10 md:h-16"></a>
 </div>
 
 </body>
